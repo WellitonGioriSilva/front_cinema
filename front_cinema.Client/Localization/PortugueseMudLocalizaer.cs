@@ -1,6 +1,5 @@
 using MudBlazor;
-using Microsoft.Extensions.Localization; // necessário para usar LocalizedString
-
+using Microsoft.Extensions.Localization;
 namespace front_cinema.Client.Localization
 {
     public class PortugueseMudLocalizer : MudLocalizer
@@ -11,7 +10,6 @@ namespace front_cinema.Client.Localization
             {
                 var value = key switch
                 {
-                    // Novas chaves do MudDataGrid
                     "MudDataGridPager_RowsPerPage" => "Linhas por página",
                     "MudDataGridPager_Of" => "de",
                     "MudDataGridPager_Items" => "itens",
@@ -26,7 +24,6 @@ namespace front_cinema.Client.Localization
                     "MudStepper_Next" => "Avançar",
                     "MudStepper_Complete" => "Finalizar",
 
-                    // Outras traduções genéricas
                     "PaginationRowsPerPage" => "Linhas por página",
                     "PaginationNext" => "Próximo",
                     "PaginationPrevious" => "Anterior",
