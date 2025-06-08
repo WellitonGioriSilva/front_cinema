@@ -1,0 +1,85 @@
+﻿@page "/venda"
+
+@using System.Net.Http.Json
+@inject HttpClient httpClient
+
+<PageTitle>Vendas</PageTitle>
+<MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
+
+<form action="">
+    <MudGrid Spacing="2">
+        <MudItem xs="12" sm="8" md="8" lg="8" xl="8" Class="d-flex align-center justify-center py-2">
+            <MudTextField T="string" Label="Cliente" Variant="Variant.Outlined"></MudTextField>
+        </MudItem>
+        <MudItem xs="6" sm="2" md="2" lg="2" xl="2" Class="d-flex align-center justify-center py-2">
+            <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Search" Color="Color.Primary"
+                Class="mud-width-full">Buscar
+            </MudButton>
+        </MudItem>
+        <MudItem xs="6" sm="2" md="2" lg="2" xl="2" Class="d-flex align-center justify-center py-2">
+            <MudButton Href="venda/create"
+                    Variant="Variant.Filled"
+                    EndIcon="@Icons.Material.Filled.Add"
+                    Color="Color.Success"
+                    Class="mud-width-full"
+                    Disabled=false>
+                Novo
+            </MudButton>
+
+        </MudItem>
+
+        <MudItem xs="12">
+            <MudTable Items="@Elements">
+                <ColGroup>
+                    <col style="width: 5%;" />
+                    <col style="width: 50%;" />
+                    <col style="width: 20%;" />
+                    <col style="width: 15%;" />
+                    <col style="width: 10%;" />
+                </ColGroup>
+                <HeaderContent>
+                    <MudTh>Id</MudTh>
+                    <MudTh>Cliente</MudTh>
+                    <MudTh>Data</MudTh>
+                    <MudTh>Total</MudTh>
+                    <MudTh Style="text-align:center">Ações</MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Id">@context.Id</MudTd>
+                    <MudTd DataLabel="Cliente">@context.Cliente</MudTd>
+                    <MudTd DataLabel="Data">@context.Data</MudTd>
+                    <MudTd DataLabel="Total">@context.Total</MudTd>
+                    <MudTd DataLabel="Ações" Style="text-align:right"></MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+            </MudTable>
+        </MudItem>
+    </MudGrid>
+</form>
+
+
+
+@code {
+    //private IEnumerable<Element> Elements = new List<Element>();
+    private IEnumerable<Element> Elements = new List<Element>
+    {
+        new Element { Id = 1, Cliente = "Welliton",  Data = "07/06/2025", Total = 20},
+        new Element { Id = 2, Cliente = "Giori", Data = "07/06/2025", Total = 25},
+        new Element { Id = 3, Cliente = "Welliton Giori", Data = "07/06/2025", Total = 15}
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable");
+    }
+
+    public class Element
+    {
+        public int Id { get; set; }
+        public string Cliente { get; set; }
+        public string Data { get; set; }
+        public int Total { get; set; }
+    }
+}

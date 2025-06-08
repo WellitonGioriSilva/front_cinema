@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\front_cinema.Client.props" />
+</Project>

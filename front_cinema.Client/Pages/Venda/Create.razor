@@ -1,0 +1,163 @@
+@page "/venda/create"
+
+@using System.ComponentModel.DataAnnotations
+
+<PageTitle>Venda</PageTitle>
+<MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
+
+<MudGrid>
+    <MudItem xs="12">
+        <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator/>
+            <MudGrid>
+
+
+                <MudItem xs="12" Class="pt-0">
+                    @* <MudPaper Style="width: 100%"> *@
+                    <MudStepper ShowResetButton>
+                        <ChildContent>
+                            <MudStep Title="Dados Iniciais">
+                                <MudItem xs="12" sm="12">
+                                    <MudItem xs="12" sm="12" Class="d-flex">
+                                        <MudCardContent Style="width: 20%">
+                                            <MudDatePicker Label="Data" Variant="Variant.Outlined"/>
+                                        </MudCardContent>
+                                        <MudCardContent Style="width: 35%">
+                                            <MudTextField Variant="Variant.Outlined" Label="First name" HelperText="Max. 8 characters"
+                                            @bind-Value="model.Email" For="@(() => model.Email)"/>
+                                        </MudCardContent>
+                                        @* <MudCardActions>
+                                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
+                                            </MudCardActions> *@
+                                    </MudItem>
+                                    <MudItem xs="12" sm="12" Class="d-flex pt-0">
+                                        <MudCardContent Style="width: 35%">
+                                            <MudTextField Variant="Variant.Outlined" Label="First name" HelperText="Max. 8 characters"
+                                            @bind-Value="model.Username" For="@(() => model.Username)"/>
+                                        </MudCardContent>
+                                    </MudItem>
+                                </MudItem>
+                            </MudStep>
+                            <MudStep Title="Assentos">
+                                <MudGrid>
+                                    @foreach (Assento assento in assentos)
+                                    {
+                                        <MudItem xs="1">
+                                            <MudPaper Class="@($"{GetClasse(assento)} d-flex align-center justify-center")"
+                                                Style="width: 100%; height: 80px;" 
+                                                @onclick="() => AlternarSelecao(assento)" 
+                                                Disabled="@assento._ocupado" 
+                                                Elevation="1">@assento._numero
+                                            </MudPaper>
+                                        </MudItem>
+                                    }
+                                </MudGrid>
+                            </MudStep>
+                            <MudStep Title="Pagamento">Dados de pagamento</MudStep>
+                        </ChildContent>
+                        <CompletedContent>
+
+                        </CompletedContent>
+                    </MudStepper>
+                    @* </MudPaper> *@
+                </MudItem>
+            </MudGrid>
+        </EditForm>
+    </MudItem>
+</MudGrid>
+
+
+<style>
+    .assento {
+    border: 2px solid #9e9e9e;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    }
+
+    .assento-selecionado {
+    background-color: #4caf50;
+    color: rgb(39,39,47);
+    }
+    .assento-ocupado {
+    background-color: #757575;
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #ddd;
+    }
+</style>
+
+@code {
+
+
+
+    List<Assento> assentos = new List<Assento>();
+    public class Assento
+    {
+        public int _numero;
+
+        public bool _selecionado;
+
+        public bool _ocupado;
+    }
+    protected override void OnInitialized()
+
+    {
+
+        for (int i = 1; i <= 11; i++)
+
+            assentos.Add(new Assento { _numero = i, _selecionado = false });
+
+
+
+        assentos.Add(new Assento { _numero = 13, _selecionado = false, _ocupado = true });
+
+    }
+
+
+    @* Classes Assentos *@
+    void AlternarSelecao(Assento assento)
+    {
+        assento._selecionado = !assento._selecionado;
+    }
+    string GetClasse(Assento assento)
+    {
+        if (assento._ocupado)
+            return "assento assento-ocupado";
+
+
+
+        return "assento " + (assento._selecionado ? "assento-selecionado" : "assento-livre");
+    }
+
+
+    @* Validação padrão do MudBlazor *@
+    RegisterAccountForm model = new RegisterAccountForm();
+    bool success;
+
+    public class RegisterAccountForm
+    {
+        [Required]
+        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
+        public string Username { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
+        public string Password { get; set; }
+
+        [Required]
+        [Compare(nameof(Password))]
+        public string Password2 { get; set; }
+
+    }
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+}
