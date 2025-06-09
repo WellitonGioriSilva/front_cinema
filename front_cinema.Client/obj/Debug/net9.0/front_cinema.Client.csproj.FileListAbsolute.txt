@@ -821,8 +821,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\blazo
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\blazor.boot.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\tzxjg6is5z-f7451o6lak.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\0wz98yz2xy-shgs22i5w1.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\es935mu6vl-x0ueugt8gp.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\kswriqhi5m-x0ueugt8gp.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\jaq7russgg-md9yvkcqlf.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\ko2gk49cjt-n7we7nbch1.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\2bn0pur22s-waskkzx0nn.gz
@@ -1041,13 +1039,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\refint\front_cinema.Client.dll
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front_cinema.Client.pdb
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\ref\front_cinema.Client.dll
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.k6csg5u661.pdb
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.6kisdjvxht.wasm
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.k6csg5u661.pdb.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.6kisdjvxht.wasm.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-6kisdjvxht.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-k6csg5u661.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-rlpxrl83rj.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.n7we7nbch1.wasm
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Components.waskkzx0nn.wasm
@@ -2093,3 +2084,13 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\D
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-hedipwq3qs.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-5e3hoys7x5.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-hiw827hexj.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front_cinema.Client.sourcelink.json
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\es935mu6vl-tswichycbp.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\kswriqhi5m-tswichycbp.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ks4jnzh7zk.pdb
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.2yvdphh19w.wasm
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ks4jnzh7zk.pdb.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.2yvdphh19w.wasm.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-2yvdphh19w.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-ks4jnzh7zk.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-h90vrdrane.gz

@@ -57,7 +57,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\front_cinema
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\scopedcss\bundle\front_cinema.styles.css
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\compressed\tzxjg6is5z-f7451o6lak.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\compressed\0wz98yz2xy-shgs22i5w1.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\compressed\n0qwl9mav1-2jeq8efc6q.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -143,3 +142,5 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema\obj\Debug\ne
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema\obj\Debug\net9.0\front_cinema.pdb
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema\obj\Debug\net9.0\front_cinema.genruntimeconfig.cache
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema\obj\Debug\net9.0\ref\front_cinema.dll
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\front_cinema.sourcelink.json
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema\obj\Debug\net9.0\compressed\n0qwl9mav1-2jeq8efc6q.gz

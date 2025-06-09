@@ -1,10 +1,11 @@
 @page "/venda/create"
 
 @using System.ComponentModel.DataAnnotations
+@using front_cinema.Client.Components
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
-
+<LookupButton></LookupButton>
 <MudGrid>
     <MudItem xs="12">
         <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
@@ -16,7 +17,8 @@
                     @* <MudPaper Style="width: 100%"> *@
                     <MudStepper ShowResetButton>
                         <ChildContent>
-                            <MudStep Title="Dados Iniciais">
+                            <MudStep Title="Filme">Filme</MudStep>
+                            <MudStep Title="Venda">
                                 <MudItem xs="12" sm="12">
                                     <MudItem xs="12" sm="12" Class="d-flex">
                                         <MudCardContent Style="width: 20%">
@@ -52,11 +54,12 @@
                                         </MudItem>
                                     }
                                 </MudGrid>
+                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal</MudText>
                             </MudStep>
                             <MudStep Title="Pagamento">Dados de pagamento</MudStep>
                         </ChildContent>
                         <CompletedContent>
-
+                            Botão de Salvar
                         </CompletedContent>
                     </MudStepper>
                     @* </MudPaper> *@
@@ -88,9 +91,9 @@
 </style>
 
 @code {
+    private double subTotal = 25.00;
 
-
-
+    @* Assentos *@
     List<Assento> assentos = new List<Assento>();
     public class Assento
     {
@@ -103,7 +106,6 @@
     protected override void OnInitialized()
 
     {
-
         for (int i = 1; i <= 11; i++)
 
             assentos.Add(new Assento { _numero = i, _selecionado = false });
