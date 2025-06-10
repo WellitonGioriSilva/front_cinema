@@ -2087,10 +2087,10 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\D
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front_cinema.Client.sourcelink.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\es935mu6vl-tswichycbp.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\kswriqhi5m-tswichycbp.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ks4jnzh7zk.pdb
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.2yvdphh19w.wasm
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ks4jnzh7zk.pdb.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.2yvdphh19w.wasm.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-2yvdphh19w.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-ks4jnzh7zk.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-h90vrdrane.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.4diu9k7kad.pdb
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.mxxbvyya80.wasm
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.4diu9k7kad.pdb.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.mxxbvyya80.wasm.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-mxxbvyya80.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-4diu9k7kad.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-gwekl1cuyz.gz

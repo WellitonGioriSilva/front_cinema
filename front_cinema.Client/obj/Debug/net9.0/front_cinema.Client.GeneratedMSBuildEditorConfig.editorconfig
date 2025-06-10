@@ -27,12 +27,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/ClienteLookupDialog.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDbGllbnRlTG9va3VwRGlhbG9nLnJhem9y
+[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWFcQ2F0ZWdvcmlhRmlsbWVMb29rdXBCdXR0b24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/LookupButton.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMb29rdXBCdXR0b24ucmF6b3I=
+[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWFcQ2F0ZWdvcmlhRmlsbWVMb29rdXBEaWFsb2cucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWxtZVxGaWxtZUxvb2t1cEJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWxtZVxGaWxtZUxvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Layout/MainLayout.razor]

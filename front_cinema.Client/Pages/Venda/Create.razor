@@ -1,11 +1,11 @@
 @page "/venda/create"
 
 @using System.ComponentModel.DataAnnotations
-@using front_cinema.Client.Components
+@using front_cinema.Client.Components.Categoria
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
-<LookupButton></LookupButton>
+<CategoriaFilmeLookupButton></CategoriaFilmeLookupButton>
 <MudGrid>
     <MudItem xs="12">
         <EditForm Model="@model" OnValidSubmit="OnValidSubmit">

@@ -1,0 +1,25 @@
+@using front_cinema.Client.Models
+
+
+<MudTextField T="string" Label="Categoria" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@SelectedCategoria?.GetNome()"/>
+<MudTextField T="string" Value="@SelectedCategoria?.GetId().ToString()" style="display:none;" InputId="categoria_id"/>
+
+@code {
+    CategoriaFilme SelectedCategoria;
+
+    private async Task OpenLookupDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+        var dialog = DialogService.Show<CategoriaFilmeLookupDialog>("Selecionar Categoria", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            SelectedCategoria = (CategoriaFilme)result.Data;
+        }
+    }
+
+    [Inject] IDialogService DialogService { get; set; }
+}

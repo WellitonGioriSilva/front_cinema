@@ -1,0 +1,52 @@
+
+@using MudBlazor
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@using front_cinema.Client.Models
+
+
+<MudDialog>
+    <DialogContent>
+        <MudTable Items="_filmes" Hover="true" Bordered="true">
+            <HeaderContent>
+                <MudTh>Id</MudTh>
+                <MudTh>Nome</MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.GetId()</MudTd>
+                <MudTd>@context.GetNome()</MudTd>
+                <MudTd>
+                    <MudButton Color="Color.Primary" Size="Size.Small" OnClick="@(() => Selecionar(context))">
+                        Selecionar
+                    </MudButton>
+                </MudTd>
+            </RowTemplate>
+        </MudTable>
+    </DialogContent>
+    <DialogActions>
+        @* <MudButton OnClick="() => MudDialog.Cancel()">Cancelar</MudButton> *@
+    </DialogActions>
+</MudDialog>
+
+@code {
+    @* Parâmetros para filtro *@
+    [Parameter]
+    public int Id { get; set; }
+    public string Nome { get; set; }
+
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set;} 
+
+    List<Filme> _filmes = new()
+    {
+        new Filme(1, "Teste"),
+        new Filme(2, "Teste 1"),
+        new Filme(3, "Teste 2")
+    };
+
+    void Selecionar(Filme filme)
+    {
+        MudDialog.Close(DialogResult.Ok<Filme>(filme));
+    }
+}
