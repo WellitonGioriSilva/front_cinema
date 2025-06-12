@@ -7,6 +7,7 @@
 
 <MudDialog>
     <DialogContent>
+        <MudTextField T="string" Variant="Variant.Outlined" Label="First name"/>
         <MudTable Items="_filmes" Hover="true" Bordered="true">
             <HeaderContent>
                 <MudTh>Id</MudTh>
@@ -31,9 +32,9 @@
 
 @code {
     @* Parâmetros para filtro *@
-    [Parameter]
-    public int Id { get; set; }
-    public string Nome { get; set; }
+    @* [Parameter] *@
+    @* public int Id { get; set; } *@
+    @* public string Nome { get; set; } *@
 
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set;} 

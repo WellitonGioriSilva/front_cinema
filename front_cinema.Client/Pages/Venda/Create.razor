@@ -1,11 +1,10 @@
 @page "/venda/create"
 
 @using System.ComponentModel.DataAnnotations
-@using front_cinema.Client.Components.Categoria
+@using front_cinema.Client.Components.Filme
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
-<CategoriaFilmeLookupButton></CategoriaFilmeLookupButton>
 <MudGrid>
     <MudItem xs="12">
         <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
@@ -17,7 +16,14 @@
                     @* <MudPaper Style="width: 100%"> *@
                     <MudStepper ShowResetButton>
                         <ChildContent>
-                            <MudStep Title="Filme">Filme</MudStep>
+                            <MudStep Title="Filme" Class="gap-3 d-flex">
+                                <MudItem xs="12">
+                                        <FilmeLookupButton/>
+                                </MudItem>
+                                <MudItem xs="12">
+                                        <FilmeLookupButton/>
+                                </MudItem>
+                            </MudStep>
                             <MudStep Title="Venda">
                                 <MudItem xs="12" sm="12">
                                     <MudItem xs="12" sm="12" Class="d-flex">
@@ -106,13 +112,15 @@
     protected override void OnInitialized()
 
     {
-        for (int i = 1; i <= 11; i++)
+        for (int i = 1; i <= 13; i++){
+            if(i != 9 && i != 13){
+                assentos.Add(new Assento { _numero = i, _selecionado = false });
+            }else{
+                assentos.Add(new Assento { _numero = i, _selecionado = false, _ocupado = true });
+            }
 
-            assentos.Add(new Assento { _numero = i, _selecionado = false });
+        }
 
-
-
-        assentos.Add(new Assento { _numero = 13, _selecionado = false, _ocupado = true });
 
     }
 

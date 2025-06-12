@@ -9,9 +9,10 @@ namespace front_cinema.Client.Models
         private TimeSpan _duracao;
         private CategoriaFilme _categoriaFilme;
 
-        public Filme(int id, string nome, string sinopse, TimeSpan duracao, CategoriaFilme categoriaFilme)
+        public Filme(int id, string nome/*, string sinopse, TimeSpan duracao, CategoriaFilme categoriaFilme*/)
         {
             _id = id;
+            _nome = nome;
         }
         public int GetId()
         {
