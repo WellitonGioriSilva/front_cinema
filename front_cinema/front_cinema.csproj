@@ -8,6 +8,7 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.6" />
     <PackageReference Include="MudBlazor" Version="8.7.0" />
     <ProjectReference Include="..\front_cinema.Client\front_cinema.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.*" />

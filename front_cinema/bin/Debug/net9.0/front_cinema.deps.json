@@ -9,6 +9,7 @@
       "front_cinema/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "9.0.6",
+          "Microsoft.AspNetCore.WebUtilities": "9.0.6",
           "MudBlazor": "8.7.0",
           "front_cinema.Client": "1.0.0"
         },
@@ -94,6 +95,17 @@
       "Microsoft.AspNetCore.Metadata/9.0.6": {
         "runtime": {
           "lib/net9.0/Microsoft.AspNetCore.Metadata.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26701"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.WebUtilities/9.0.6": {
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "9.0.6"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.WebUtilities.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.625.26701"
           }
@@ -298,6 +310,17 @@
           }
         }
       },
+      "Microsoft.Net.Http.Headers/9.0.6": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "9.0.6"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Net.Http.Headers.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.625.26701"
+          }
+        }
+      },
       "MudBlazor/8.7.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "9.0.6",
@@ -314,6 +337,7 @@
       "front_cinema.Client/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "9.0.6",
+          "Microsoft.AspNetCore.WebUtilities": "9.0.6",
           "MudBlazor": "8.7.0"
         },
         "runtime": {
@@ -386,6 +410,13 @@
       "sha512": "sha512-SZAmFKGsQPP/xyDir96J5UNTAdCsfeCpPwFO9EewIcgQ8gUr3KHmn4CTC2HmHIDdiTujGC2T3VBcSxmrY+3n/g==",
       "path": "microsoft.aspnetcore.metadata/9.0.6",
       "hashPath": "microsoft.aspnetcore.metadata.9.0.6.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.WebUtilities/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JrCzhqz0BgzphLHsKTPg4V0qZajLgfb/MtXmodVCpZ5s4vmb9Wuqauq+A23S+cobQY8s2QPgPPTr7lHZD0NU8w==",
+      "path": "microsoft.aspnetcore.webutilities/9.0.6",
+      "hashPath": "microsoft.aspnetcore.webutilities.9.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.6": {
       "type": "package",
@@ -512,6 +543,13 @@
       "sha512": "sha512-y93mMbFyYo5lq9cDkm2wYlob7RmeKulZVpjMYUOIztry/TpXlHrFgBb2TcWMuKnwvfbf4Ag6oIx+F3aQAAVA6A==",
       "path": "microsoft.jsinterop.webassembly/9.0.6",
       "hashPath": "microsoft.jsinterop.webassembly.9.0.6.nupkg.sha512"
+    },
+    "Microsoft.Net.Http.Headers/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YwD5LtA45rgLeJV9+DvRolwue2+s/Y1br5BFL+XdakM8Q859ICkbuH3ymvD+ibnXXkHsDaEvr8Sc+nauisABOg==",
+      "path": "microsoft.net.http.headers/9.0.6",
+      "hashPath": "microsoft.net.http.headers.9.0.6.nupkg.sha512"
     },
     "MudBlazor/8.7.0": {
       "type": "package",
