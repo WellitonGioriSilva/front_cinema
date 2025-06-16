@@ -15,6 +15,9 @@ namespace front_cinema.Client.Models
 
         [JsonPropertyName("_duracao")]
         public TimeSpan Duracao { get; set; }
+        
+        [JsonPropertyName("_categoria")]
+        public CategoriaFilme Categoria { get; set; }
 
         public Filme() { }
     }

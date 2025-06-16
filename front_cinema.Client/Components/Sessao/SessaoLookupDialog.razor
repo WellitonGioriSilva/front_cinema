@@ -9,21 +9,23 @@
 
 <MudDialog>
     <DialogContent>
-        <MudTextField T="string" Variant="Variant.Outlined" Label="Nome" TextChanged="OnChangeSearch"
-            Immediate="true" />
-        <MudTable Items="_filmes" Hover="true" Bordered="true">
+        @* <MudTextField T="string" Variant="Variant.Outlined" Label="Data" TextChanged="OnChangeSearch"
+        Immediate="true" /> *@
+        <MudTable Items="_sessoes" Hover="true" Bordered="true">
             <HeaderContent>
                 <MudTh>Id</MudTh>
-                <MudTh>Nome</MudTh>
-                <MudTh>Categoria</MudTh>
-                <MudTh>Duração</MudTh>
+                <MudTh>Data</MudTh>
+                <MudTh>Hora</MudTh>
+                <MudTh>Valor</MudTh>
+                <MudTh>Meia</MudTh>
                 <MudTh></MudTh>
             </HeaderContent>
             <RowTemplate>
                 <MudTd>@context.Id</MudTd>
-                <MudTd>@context.Nome</MudTd>
-                <MudTd>@context.Categoria.Nome</MudTd>
-                <MudTd>@context.Duracao</MudTd>
+                <MudTd>@context.Data.ToString("dd/MM/yyyy")</MudTd>
+                <MudTd>@context.Hora</MudTd>
+                <MudTd>@context.Valor.ToString("C2")</MudTd>
+                <MudTd>@(context.Meia == true ? "Sim" : "Não")</MudTd>
                 <MudTd>
                     <MudButton Color="Color.Primary" Size="Size.Small" OnClick="@(() => Selected(context))">
                         Selecionar
@@ -39,8 +41,8 @@
 
 @code {
     @* Parâmetros para filtro *@
-    @* [Parameter] *@
-    @* public int Id { get; set; } *@
+    [Parameter]
+    public int IdFilme { get; set; }
     @* public string Nome { get; set; } *@
     int _id = 0;
     string _nome = null;
@@ -48,22 +50,22 @@
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set; }
 
-    @* Inicializa lista de filmes *@
-    List<Filme> _filmes = new List<Filme>();
+    @* Inicializa lista de sessoes *@
+    List<Sessao> _sessoes = new List<Sessao>();
 
     protected override async Task OnInitializedAsync()
     {
-        await GetFilmesAsync();
+        await GetSessoesAsync();
     }
 
-    @* Seleciona o Filme - Colocar try catch*@
-    void Selected(Filme filme)
+    @* Seleciona o Sessao - Colocar try catch*@
+    void Selected(Sessao sessao)
     {
-        MudDialog.Close(DialogResult.Ok<Filme>(filme));
+        MudDialog.Close(DialogResult.Ok<Sessao>(sessao));
     }
 
     @* Chama Api *@
-    async Task<List<Filme>> GetFilmesAsync()
+    async Task<List<Sessao>> GetSessoesAsync()
     {
         try
         {
@@ -72,25 +74,25 @@
 {
 { "id", _id.ToString() }
 };
-            if (!string.IsNullOrWhiteSpace(_nome))
+            if (IdFilme != 0 && IdFilme != null)
             {
-                queryParams.Add("nome", _nome);
+                queryParams.Add("id_filme_fk", IdFilme.ToString());
             }
-            var url = QueryHelpers.AddQueryString($"{baseUrl}/filme", queryParams);
-            _filmes = await _http.GetFromJsonAsync<List<Filme>>($"{url}");
+            var url = QueryHelpers.AddQueryString($"{baseUrl}/sessao", queryParams);
+            _sessoes = await _http.GetFromJsonAsync<List<Sessao>>($"{url}");
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
 
-        return _filmes;
+        return _sessoes;
     }
 
     @* Ao alterar texto de busca - Colocar try catch *@
     private async Task OnChangeSearch(string value)
     {
         _nome = value;
-        await GetFilmesAsync();
+        await GetSessoesAsync();
     }
 }

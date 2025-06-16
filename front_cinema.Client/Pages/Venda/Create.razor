@@ -2,6 +2,7 @@
 
 @using System.ComponentModel.DataAnnotations
 @using front_cinema.Client.Components.Filme
+@using front_cinema.Client.Components.Sessao
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
@@ -10,18 +11,16 @@
         <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
             <DataAnnotationsValidator/>
             <MudGrid>
-
-
                 <MudItem xs="12" Class="pt-0">
                     @* <MudPaper Style="width: 100%"> *@
                     <MudStepper ShowResetButton>
                         <ChildContent>
                             <MudStep Title="Filme" Class="gap-3 d-flex">
                                 <MudItem xs="12">
-                                        <FilmeLookupButton/>
+                                    <FilmeLookupButton OnFilmeSelecionado="OnFilmeSelecionado"/>
                                 </MudItem>
                                 <MudItem xs="12">
-                                        <FilmeLookupButton/>
+                                    <SessaoLookupButton IdFilme="@idFilmeSelecionado"/>
                                 </MudItem>
                             </MudStep>
                             <MudStep Title="Venda">
@@ -52,10 +51,10 @@
                                     {
                                         <MudItem xs="1">
                                             <MudPaper Class="@($"{GetClasse(assento)} d-flex align-center justify-center")"
-                                                Style="width: 100%; height: 80px;" 
-                                                @onclick="() => AlternarSelecao(assento)" 
-                                                Disabled="@assento._ocupado" 
-                                                Elevation="1">@assento._numero
+                                            Style="width: 100%; height: 80px;" 
+                                            @onclick="() => AlternarSelecao(assento)" 
+                                            Disabled="@assento._ocupado" 
+                                            Elevation="1">@assento._numero
                                             </MudPaper>
                                         </MudItem>
                                     }
@@ -98,6 +97,7 @@
 
 @code {
     private double subTotal = 25.00;
+    private int idFilmeSelecionado = 0;
 
     @* Assentos *@
     List<Assento> assentos = new List<Assento>();
@@ -169,5 +169,11 @@
     {
         success = true;
         StateHasChanged();
+    }
+
+    @* Retorna id do filme selecionado *@
+    private void OnFilmeSelecionado(int id)
+    {
+        idFilmeSelecionado = id;
     }
 }

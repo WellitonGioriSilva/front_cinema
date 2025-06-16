@@ -1,27 +1,22 @@
+using System.Text.Json.Serialization;
 
 namespace front_cinema.Client.Models
 {
     public class CategoriaFilme
     {
-        private int _id;
-        private string _nome;
+        [JsonPropertyName("_id")]
+        public int Id { get; set; }
 
-        public CategoriaFilme(int id, string nome)
-        {
-            _id = id;
-            SetNome(nome);
+        [JsonPropertyName("_nome")]
+        public string Nome { get; set; }
+
+        public CategoriaFilme(){
+
         }
-        public int GetId()
-        {
-            return _id;
-        }
-        public string GetNome()
-        {
-            return _nome;
-        }
-        public void SetNome(string nome)
-        {
-            _nome = nome;
+
+        public CategoriaFilme(int id, string nome){
+            Id = id;
+            Nome = nome;
         }
     }
 }

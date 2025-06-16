@@ -1,8 +1,10 @@
 @using front_cinema.Client.Models
 
 
-<MudTextField T="string" Label="Categoria" Variant="Variant.Outlined" Adornment="Adornment.End" AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@SelectedCategoria?.GetNome()"/>
-<MudTextField T="string" Value="@SelectedCategoria?.GetId().ToString()" style="display:none;" InputId="categoria_id"/>
+<MudTextField T="string" Label="Categoria" Variant="Variant.Outlined" Adornment="Adornment.End"
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
+    Value="@SelectedCategoria?.Nome" />
+<MudTextField T="string" Value="@SelectedCategoria?.Id.ToString()" style="display:none;" InputId="categoria_id" />
 
 @code {
     CategoriaFilme SelectedCategoria;

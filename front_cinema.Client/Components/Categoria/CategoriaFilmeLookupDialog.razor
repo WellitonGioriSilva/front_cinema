@@ -1,4 +1,3 @@
-
 @using MudBlazor
 @inject IDialogService DialogService
 @inject ISnackbar Snackbar
@@ -14,8 +13,8 @@
                 <MudTh></MudTh>
             </HeaderContent>
             <RowTemplate>
-                <MudTd>@context.GetId()</MudTd>
-                <MudTd>@context.GetNome()</MudTd>
+                <MudTd>@context.Id</MudTd>
+                <MudTd>@context.Nome</MudTd>
                 <MudTd>
                     <MudButton Color="Color.Primary" Size="Size.Small" OnClick="@(() => Selecionar(context))">
                         Selecionar
@@ -36,14 +35,14 @@
     public string Nome { get; set; }
 
     [CascadingParameter]
-    private IMudDialogInstance MudDialog { get; set;} 
+    private IMudDialogInstance MudDialog { get; set; }
 
     List<CategoriaFilme> _categorias = new()
-    {
-        new CategoriaFilme(1, "Teste"),
-        new CategoriaFilme(2, "Teste 1"),
-        new CategoriaFilme(3, "Teste 2")
-    };
+{
+new CategoriaFilme(1, "Teste"),
+new CategoriaFilme(2, "Teste 1"),
+new CategoriaFilme(3, "Teste 2")
+};
 
     void Selecionar(CategoriaFilme categoria)
     {

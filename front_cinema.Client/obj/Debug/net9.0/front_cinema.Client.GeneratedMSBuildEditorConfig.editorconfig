@@ -43,6 +43,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWxtZVxGaWxtZUxvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXNzYW9cU2Vzc2FvTG9va3VwQnV0dG9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXNzYW9cU2Vzc2FvTG9va3VwRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,29 @@
+@using front_cinema.Client.Models
+
+
+<MudTextField T="string" Label="Sessão" Variant="Variant.Outlined" Adornment="Adornment.End"
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
+    Value="@SelectedSessao?.Data.ToString("dd/MM/yyyy")" />
+<MudTextField T="string" Value="@SelectedSessao?.Id.ToString()" style="display:none;" InputId="id_sessao" />
+
+@code {
+    [Parameter]
+    public int IdFilme { get; set; }
+    Sessao SelectedSessao;
+
+    private async Task OpenLookupDialog()
+    {
+        var parameters = new DialogParameters { { "IdFilme", IdFilme } };
+        var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+        var dialog = DialogService.Show<SessaoLookupDialog>("Selecionar Sessão", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            SelectedSessao = (Sessao)result.Data;
+        }
+    }
+
+    [Inject] IDialogService DialogService { get; set; }
+}
