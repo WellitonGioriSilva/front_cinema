@@ -9,8 +9,7 @@
 
 <MudDialog>
     <DialogContent>
-        @* <MudTextField T="string" Variant="Variant.Outlined" Label="Data" TextChanged="OnChangeSearch"
-        Immediate="true" /> *@
+        <MudDatePicker Label="Data" Variant="Variant.Outlined" TextChanged="OnChangeSearch" Immediate="true" />
         <MudTable Items="_sessoes" Hover="true" Bordered="true">
             <HeaderContent>
                 <MudTh>Id</MudTh>
@@ -45,7 +44,7 @@
     public int IdFilme { get; set; }
     @* public string Nome { get; set; } *@
     int _id = 0;
-    string _nome = null;
+    DateTime _data;
 
     [CascadingParameter]
     private IMudDialogInstance MudDialog { get; set; }
@@ -78,6 +77,12 @@
             {
                 queryParams.Add("id_filme_fk", IdFilme.ToString());
             }
+
+            if (_data != null)
+            {
+                queryParams.Add("data", _data.ToString("yyyy-MM-dd"));
+                Console.WriteLine(_data.ToString("yyyy-MM-dd"));
+            }
             var url = QueryHelpers.AddQueryString($"{baseUrl}/sessao", queryParams);
             _sessoes = await _http.GetFromJsonAsync<List<Sessao>>($"{url}");
         }
@@ -92,7 +97,7 @@
     @* Ao alterar texto de busca - Colocar try catch *@
     private async Task OnChangeSearch(string value)
     {
-        _nome = value;
+        _data = Convert.ToDateTime(value);
         await GetSessoesAsync();
     }
 }
