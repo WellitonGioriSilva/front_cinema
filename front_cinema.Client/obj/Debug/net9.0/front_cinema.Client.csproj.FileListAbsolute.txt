@@ -1047,10 +1047,10 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\D
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\webcil\Microsoft.Net.Http.Headers.wasm
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\hohuouqujl-l80fr41uqp.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\klc9qqkvl0-prfhyimi6q.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.0fru0licf7.wasm
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ou4rzd12wc.pdb
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.0fru0licf7.wasm.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ou4rzd12wc.pdb.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-0fru0licf7.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-ou4rzd12wc.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-3aoy3m0ugt.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.lj8smz1e3m.wasm
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.a93of68heu.pdb
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.lj8smz1e3m.wasm.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.a93of68heu.pdb.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-lj8smz1e3m.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-a93of68heu.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-mkkozl2y0f.gz

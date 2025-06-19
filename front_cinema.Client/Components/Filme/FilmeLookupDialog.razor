@@ -68,10 +68,7 @@
         try
         {
             var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
-            var queryParams = new Dictionary<string, string>
-{
-{ "id", _id.ToString() }
-};
+            var queryParams = new Dictionary<string, string> { };
             if (!string.IsNullOrWhiteSpace(_nome))
             {
                 queryParams.Add("nome", _nome);
