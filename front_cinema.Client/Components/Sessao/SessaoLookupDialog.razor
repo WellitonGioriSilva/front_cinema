@@ -13,6 +13,7 @@
         <MudTable Items="_sessoes" Hover="true" Bordered="true">
             <HeaderContent>
                 <MudTh>Id</MudTh>
+                <MudTh>Sala</MudTh>
                 <MudTh>Data</MudTh>
                 <MudTh>Hora</MudTh>
                 <MudTh>Valor</MudTh>
@@ -21,6 +22,7 @@
             </HeaderContent>
             <RowTemplate>
                 <MudTd>@context.Id</MudTd>
+                <MudTd>@context.Sala.Numero</MudTd>
                 <MudTd>@context.Data.ToString("dd/MM/yyyy")</MudTd>
                 <MudTd>@context.Hora</MudTd>
                 <MudTd>@context.Valor.ToString("C2")</MudTd>
@@ -42,7 +44,7 @@
     @* Parâmetros para filtro *@
     [Parameter]
     public int IdFilme { get; set; }
-    @* public string Nome { get; set; } *@
+
     int _id = 0;
     DateTime? _data;
 

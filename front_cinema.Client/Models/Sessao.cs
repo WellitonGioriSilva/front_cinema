@@ -22,6 +22,9 @@ namespace front_cinema.Client.Models
         [JsonPropertyName("_filme")]
         public Filme Filme { get; set; }
 
+        [JsonPropertyName("_sala")]
+        public Sala Sala { get; set; }
+
         public Sessao() { }
     }
 }

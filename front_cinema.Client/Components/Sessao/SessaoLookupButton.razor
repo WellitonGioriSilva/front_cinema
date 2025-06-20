@@ -9,6 +9,8 @@
 @code {
     [Parameter]
     public int IdFilme { get; set; }
+    [Parameter]
+    public EventCallback<int> OnSessaoSelecionada { get; set; }
     Sessao SelectedSessao;
 
     private async Task OpenLookupDialog()
@@ -22,6 +24,10 @@
         if (!result.Canceled)
         {
             SelectedSessao = (Sessao)result.Data;
+            if (SelectedSessao != null)
+            {
+                await OnSessaoSelecionada.InvokeAsync(SelectedSessao.Id);
+            }
         }
     }
 
