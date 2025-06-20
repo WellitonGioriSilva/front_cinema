@@ -26,7 +26,7 @@
                                     <FilmeLookupButton OnFilmeSelecionado="OnFilmeSelecionado"/>
                                 </MudItem>
                                 <MudItem xs="12">
-                                    <SessaoLookupButton IdFilme="@idFilmeSelecionado" OnSessaoSelecionada="OnSessaoSelecionada"/>
+                                    <SessaoLookupButton IdFilme="@idFilmeSelecionado" OnsessaoSelecionada="OnsessaoSelecionada"/>
                                 </MudItem>
                             </MudStep>
                             <MudStep Title="Venda">
@@ -66,7 +66,7 @@
                                         </MudItem>
                                     }
                                 </MudGrid>
-                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal</MudText>
+                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal.ToString("C2")</MudText>
 
                             </MudStep>
                             <MudStep Title="Pagamento">Dados de pagamento</MudStep>
@@ -104,9 +104,9 @@
 </style>
 
 @code {
-    private double subTotal = 25.00;
+    private double subTotal = 0;
     private int idFilmeSelecionado = 0;
-    private int idSessaoSelecionada = 0;
+    private Sessao sessaoSelecionada;
 
     @* Assentos *@
     List<Assento> assentos = new List<Assento>();
@@ -121,6 +121,11 @@
     void AlternarSelecao(Assento assento)
     {
         assento.Selecionado = !assento.Selecionado;
+        if(assento.Selecionado == true){
+            subTotal += sessaoSelecionada.Valor;
+        }else{
+            subTotal -= sessaoSelecionada.Valor;
+        }
     }
     string GetClasse(Assento assento)
     {
@@ -134,9 +139,9 @@
         {
             var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
             var queryParams = new Dictionary<string, string> { };
-            if (idSessaoSelecionada != 0 && idSessaoSelecionada != null)
+            if (sessaoSelecionada.Id != 0 && sessaoSelecionada.Id != null)
             {
-                queryParams.Add("idSessao", idSessaoSelecionada.ToString());
+                queryParams.Add("idSessao", sessaoSelecionada.Id.ToString());
             }
 
             var url = QueryHelpers.AddQueryString($"{baseUrl}/assento/livre", queryParams);
@@ -217,9 +222,9 @@
     }
 
 @* Retorna id do filme selecionado *@
-    private void OnSessaoSelecionada(int id)
+    private void OnsessaoSelecionada(Sessao sessao)
     {
-        idSessaoSelecionada = id;
+        sessaoSelecionada = sessao;
         GetAssentosAsync();
     }
 }

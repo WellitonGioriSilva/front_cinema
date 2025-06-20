@@ -1,6 +1,7 @@
 using MudBlazor.Services;
 using front_cinema.Client.Pages;
 using front_cinema.Components;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,5 +37,9 @@ app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(front_cinema.Client._Imports).Assembly);
+
+var culture = new CultureInfo("pt-BR");
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 app.Run();
