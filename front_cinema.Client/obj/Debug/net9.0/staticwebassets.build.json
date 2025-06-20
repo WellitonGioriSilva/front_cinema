@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ev6URmpZK9GYKZA3WNd6ikd7tsl28U1kI+Ro9uTeWQg=",
+  "Hash": "uV5UBttfEvWRlaO3SYj79bfPZQVl07IYLP6jFSOHfVc=",
   "Source": "front_cinema.Client",
   "BasePath": "/",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "sjq504oqha",
-      "Integrity": "qKVDGC90e7kw4VK6I3qxC0zgSSA0XvNQLROVyM1Ccrk=",
+      "Fingerprint": "xj4z12gf5s",
+      "Integrity": "zapjtQJlozRlD6dktp1/cGZgv/OB8eZ3iCUi6vZopzY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\blazor.boot.json"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "hw4e4o35o6",
-      "Integrity": "UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4=",
+      "Fingerprint": "j64fs5kco4",
+      "Integrity": "69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net9.0\\front_cinema.Client.pdb"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "rv0qfrcm84",
-      "Integrity": "CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI=",
+      "Fingerprint": "vd1geagpl5",
+      "Integrity": "/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\webcil\\front_cinema.Client.wasm"
@@ -4427,7 +4427,7 @@
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\Microsoft.Extensions.Configuration.wasm"
     },
     {
-      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-sjq504oqha.gz",
+      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-xj4z12gf5s.gz",
       "SourceId": "front_cinema.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\",
@@ -4441,8 +4441,8 @@
       "RelatedAsset": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ae8wpjexjh",
-      "Integrity": "fgjeUz86NqSS3oH0Jdvt+UdgPc96WQtLHdISEO8ZvG0=",
+      "Fingerprint": "b384z78ywp",
+      "Integrity": "CX+gXt46pyzDFI1H9SooTJ6LsYb+PuGHL84nmf0y3CQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -6044,12 +6044,12 @@
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.Security.Cryptography.Algorithms.wasm"
     },
     {
-      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-hw4e4o35o6.gz",
+      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-j64fs5kco4.gz",
       "SourceId": "front_cinema.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/front_cinema.Client#[.{fingerprint=hw4e4o35o6}]!.pdb.gz",
+      "RelativePath": "_framework/front_cinema.Client#[.{fingerprint=j64fs5kco4}]!.pdb.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -6058,8 +6058,8 @@
       "RelatedAsset": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "dko9i9rzkn",
-      "Integrity": "nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E=",
+      "Fingerprint": "jmeeh6i9d8",
+      "Integrity": "ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.pdb"
@@ -8522,12 +8522,12 @@
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\System.Security.Cryptography.Cng.wasm"
     },
     {
-      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-rv0qfrcm84.gz",
+      "Identity": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-vd1geagpl5.gz",
       "SourceId": "front_cinema.Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "/",
-      "RelativePath": "_framework/front_cinema.Client#[.{fingerprint=rv0qfrcm84}]!.wasm.gz",
+      "RelativePath": "_framework/front_cinema.Client#[.{fingerprint=vd1geagpl5}]!.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -8536,8 +8536,8 @@
       "RelatedAsset": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "vkol1gn5vm",
-      "Integrity": "Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8=",
+      "Fingerprint": "3j4z720jpe",
+      "Integrity": "UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.wasm"
@@ -9263,11 +9263,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qKVDGC90e7kw4VK6I3qxC0zgSSA0XvNQLROVyM1Ccrk=\""
+          "Value": "\"zapjtQJlozRlD6dktp1/cGZgv/OB8eZ3iCUi6vZopzY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9277,13 +9277,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qKVDGC90e7kw4VK6I3qxC0zgSSA0XvNQLROVyM1Ccrk="
+          "Value": "sha256-zapjtQJlozRlD6dktp1/cGZgv/OB8eZ3iCUi6vZopzY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-sjq504oqha.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-xj4z12gf5s.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -9302,11 +9302,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fgjeUz86NqSS3oH0Jdvt+UdgPc96WQtLHdISEO8ZvG0=\""
+          "Value": "\"CX+gXt46pyzDFI1H9SooTJ6LsYb+PuGHL84nmf0y3CQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:30:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9326,19 +9326,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"qKVDGC90e7kw4VK6I3qxC0zgSSA0XvNQLROVyM1Ccrk=\""
+          "Value": "W/\"zapjtQJlozRlD6dktp1/cGZgv/OB8eZ3iCUi6vZopzY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qKVDGC90e7kw4VK6I3qxC0zgSSA0XvNQLROVyM1Ccrk="
+          "Value": "sha256-zapjtQJlozRlD6dktp1/cGZgv/OB8eZ3iCUi6vZopzY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-sjq504oqha.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\02i4ktzhsf-xj4z12gf5s.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9355,11 +9355,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fgjeUz86NqSS3oH0Jdvt+UdgPc96WQtLHdISEO8ZvG0=\""
+          "Value": "\"CX+gXt46pyzDFI1H9SooTJ6LsYb+PuGHL84nmf0y3CQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:30:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9377,7 +9377,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fgjeUz86NqSS3oH0Jdvt+UdgPc96WQtLHdISEO8ZvG0="
+          "Value": "sha256-CX+gXt46pyzDFI1H9SooTJ6LsYb+PuGHL84nmf0y3CQ="
         }
       ]
     },
@@ -9443,7 +9443,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Sat, 17 May 2025 21:01:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9496,7 +9496,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Sat, 17 May 2025 21:01:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9580,7 +9580,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9633,7 +9633,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9717,7 +9717,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9770,7 +9770,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9862,7 +9862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9923,7 +9923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10619,7 +10619,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10680,7 +10680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10872,7 +10872,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10933,7 +10933,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11070,7 +11070,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11123,7 +11123,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Tue, 29 Oct 2024 02:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11307,7 +11307,7 @@
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.hw4e4o35o6.pdb",
+      "Route": "_framework/front_cinema.Client.j64fs5kco4.pdb",
       "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.pdb",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11317,7 +11317,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62340"
+          "Value": "62352"
         },
         {
           "Name": "Content-Type",
@@ -11325,11 +11325,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4=\""
+          "Value": "\"69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:20 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11339,7 +11339,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hw4e4o35o6"
+          "Value": "j64fs5kco4"
         },
         {
           "Name": "label",
@@ -11347,18 +11347,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4="
+          "Value": "sha256-69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis="
         }
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.hw4e4o35o6.pdb",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-hw4e4o35o6.gz",
+      "Route": "_framework/front_cinema.Client.j64fs5kco4.pdb",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-j64fs5kco4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000019894955"
+          "Quality": "0.000019886251"
         }
       ],
       "ResponseHeaders": [
@@ -11368,15 +11368,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "50263"
+          "Value": "50285"
         },
         {
           "Name": "ETag",
-          "Value": "\"nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E=\""
+          "Value": "\"ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11396,13 +11396,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4=\""
+          "Value": "W/\"69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hw4e4o35o6"
+          "Value": "j64fs5kco4"
         },
         {
           "Name": "label",
@@ -11410,13 +11410,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4="
+          "Value": "sha256-69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis="
         }
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.hw4e4o35o6.pdb.gz",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-hw4e4o35o6.gz",
+      "Route": "_framework/front_cinema.Client.j64fs5kco4.pdb.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-j64fs5kco4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11425,7 +11425,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "50263"
+          "Value": "50285"
         },
         {
           "Name": "Content-Type",
@@ -11433,11 +11433,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E=\""
+          "Value": "\"ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11455,7 +11455,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "hw4e4o35o6"
+          "Value": "j64fs5kco4"
         },
         {
           "Name": "label",
@@ -11463,7 +11463,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E="
+          "Value": "sha256-ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw="
         }
       ]
     },
@@ -11478,7 +11478,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62340"
+          "Value": "62352"
         },
         {
           "Name": "Content-Type",
@@ -11486,11 +11486,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4=\""
+          "Value": "\"69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:20 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11500,18 +11500,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4="
+          "Value": "sha256-69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis="
         }
       ]
     },
     {
       "Route": "_framework/front_cinema.Client.pdb",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-hw4e4o35o6.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-j64fs5kco4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000019894955"
+          "Quality": "0.000019886251"
         }
       ],
       "ResponseHeaders": [
@@ -11521,15 +11521,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "50263"
+          "Value": "50285"
         },
         {
           "Name": "ETag",
-          "Value": "\"nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E=\""
+          "Value": "\"ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11549,19 +11549,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4=\""
+          "Value": "W/\"69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UWQ0p1QFTulsPFx+0ngc+GpTSMSM5ZHmPgmtUaUGtw4="
+          "Value": "sha256-69ItztYL4GF5C1ywwielKygWMGg+tbwSR8tEwH8YNis="
         }
       ]
     },
     {
       "Route": "_framework/front_cinema.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-hw4e4o35o6.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\fdq0ojddfs-j64fs5kco4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11570,7 +11570,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "50263"
+          "Value": "50285"
         },
         {
           "Name": "Content-Type",
@@ -11578,11 +11578,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E=\""
+          "Value": "\"ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11600,12 +11600,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nWodBsgVtEpl0Bxai9MyMks3O8mKRr5j/rKxflLti/E="
+          "Value": "sha256-ddXFN4vRN3unrTPxQRH+0OmSLWNBrupE3uZZRbXPizw="
         }
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.rv0qfrcm84.wasm",
+      "Route": "_framework/front_cinema.Client.vd1geagpl5.wasm",
       "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\bin\\Debug\\net9.0\\wwwroot\\_framework\\front_cinema.Client.wasm",
       "Selectors": [],
       "ResponseHeaders": [
@@ -11623,11 +11623,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI=\""
+          "Value": "\"/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:20 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11637,7 +11637,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rv0qfrcm84"
+          "Value": "vd1geagpl5"
         },
         {
           "Name": "label",
@@ -11645,18 +11645,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI="
+          "Value": "sha256-/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU="
         }
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.rv0qfrcm84.wasm",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-rv0qfrcm84.gz",
+      "Route": "_framework/front_cinema.Client.vd1geagpl5.wasm",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-vd1geagpl5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000029720332"
+          "Quality": "0.000029747739"
         }
       ],
       "ResponseHeaders": [
@@ -11666,15 +11666,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33646"
+          "Value": "33615"
         },
         {
           "Name": "ETag",
-          "Value": "\"Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8=\""
+          "Value": "\"UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11694,13 +11694,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI=\""
+          "Value": "W/\"/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rv0qfrcm84"
+          "Value": "vd1geagpl5"
         },
         {
           "Name": "label",
@@ -11708,13 +11708,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI="
+          "Value": "sha256-/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU="
         }
       ]
     },
     {
-      "Route": "_framework/front_cinema.Client.rv0qfrcm84.wasm.gz",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-rv0qfrcm84.gz",
+      "Route": "_framework/front_cinema.Client.vd1geagpl5.wasm.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-vd1geagpl5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11723,7 +11723,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33646"
+          "Value": "33615"
         },
         {
           "Name": "Content-Type",
@@ -11731,11 +11731,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8=\""
+          "Value": "\"UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11753,7 +11753,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rv0qfrcm84"
+          "Value": "vd1geagpl5"
         },
         {
           "Name": "label",
@@ -11761,7 +11761,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8="
+          "Value": "sha256-UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q="
         }
       ]
     },
@@ -11784,11 +11784,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI=\""
+          "Value": "\"/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:20 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11798,18 +11798,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI="
+          "Value": "sha256-/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU="
         }
       ]
     },
     {
       "Route": "_framework/front_cinema.Client.wasm",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-rv0qfrcm84.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-vd1geagpl5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000029720332"
+          "Quality": "0.000029747739"
         }
       ],
       "ResponseHeaders": [
@@ -11819,15 +11819,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33646"
+          "Value": "33615"
         },
         {
           "Name": "ETag",
-          "Value": "\"Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8=\""
+          "Value": "\"UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11847,19 +11847,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI=\""
+          "Value": "W/\"/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-CX5n1fHh7DnnGxI/92u24gNbKdix3e7xc9uonxZ0VWI="
+          "Value": "sha256-/R6FqcblO9DUZAKHj4wUsp8nz0D+hgh/yqLpHtYYnnU="
         }
       ]
     },
     {
       "Route": "_framework/front_cinema.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-rv0qfrcm84.gz",
+      "AssetFile": "C:\\Users\\Agilsis\\Desktop\\front_cinema\\front_cinema.Client\\obj\\Debug\\net9.0\\compressed\\wmppuak9b4-vd1geagpl5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11868,7 +11868,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33646"
+          "Value": "33615"
         },
         {
           "Name": "Content-Type",
@@ -11876,11 +11876,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8=\""
+          "Value": "\"UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 20 Jun 2025 15:35:21 GMT"
+          "Value": "Fri, 20 Jun 2025 20:32:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11898,7 +11898,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Uf8TO550zH7Lv5D3L+dXHF2NOD2YNADvMF375IuafO8="
+          "Value": "sha256-UY9emniAzs/XeytjHDpdeUGqDRDlg+igZIdt3Ye7+4Q="
         }
       ]
     },

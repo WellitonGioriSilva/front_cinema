@@ -6,8 +6,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwro
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.p4lwlf2bu1.wasm
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.o8gq1i8bk6.js
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.hw4e4o35o6.pdb
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.rv0qfrcm84.wasm
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\icudt.oh1zvcfom8.dat
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.phaa9r44xv.wasm
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.1ddspp16i2.wasm
@@ -281,7 +279,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwro
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Security.AccessControl.b789wsqmaa.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.native.p4lwlf2bu1.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Security.Cryptography.Algorithms.gz0fe1g1sl.wasm.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.hw4e4o35o6.pdb.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Linq.Expressions.lyb8wix427.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\MudBlazor.vvc91ohnsh.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Reflection.Primitives.avph1mzt7n.wasm.gz
@@ -397,7 +394,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwro
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Security.Cryptography.Primitives.qwfipn2fwe.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.InteropServices.RuntimeInformation.efuomfulte.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Security.Cryptography.Cng.ahchakyb75.wasm.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.rv0qfrcm84.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.IO.Compression.ZipFile.x8vkytvl5t.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Runtime.CompilerServices.VisualC.b16upo65in.wasm.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\System.Net.Http.n441jzfnj6.wasm.gz
@@ -1034,9 +1030,6 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compr
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\2f44ssbqp1-o8gq1i8bk6.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\kv96ifw41h-e5oadoz1kk.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\p7wpxzljqd-oh1zvcfom8.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-rv0qfrcm84.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-hw4e4o35o6.gz
-C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-sjq504oqha.gz
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -1051,3 +1044,10 @@ C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\refint\front_cinema.Client.dll
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\front_cinema.Client.pdb
 C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\ref\front_cinema.Client.dll
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.j64fs5kco4.pdb
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.vd1geagpl5.wasm
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.j64fs5kco4.pdb.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.vd1geagpl5.wasm.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-vd1geagpl5.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-j64fs5kco4.gz
+C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-xj4z12gf5s.gz

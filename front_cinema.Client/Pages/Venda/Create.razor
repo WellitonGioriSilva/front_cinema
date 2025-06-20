@@ -29,6 +29,28 @@
                                     <SessaoLookupButton IdFilme="@idFilmeSelecionado" OnsessaoSelecionada="OnsessaoSelecionada"/>
                                 </MudItem>
                             </MudStep>
+                            <MudStep Title="Assentos">
+                                @if(assentos.Count() > 0){
+                                    <MudGrid>
+                                        @foreach (Assento assento in assentos)
+                                        {
+                                            Console.WriteLine(assento.Numero);
+                                            <MudItem xs="1">
+                                                <MudPaper Class="@($"{GetClasse(assento)} d-flex align-center justify-center")"
+                                                Style="width: 100%; height: 80px;" 
+                                                @onclick="() => AlternarSelecao(assento)" 
+                                                Disabled="@assento.Ocupado" 
+                                                Elevation="1">@assento.Numero
+                                                </MudPaper>
+                                            </MudItem>
+                                        }
+                                    </MudGrid>
+                                }else{
+                                    <MudText >Selecione um Filme e uma Sessão para selecionar os assentos!</MudText>
+                                }
+                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal.ToString("C2")</MudText>
+
+                            </MudStep>
                             <MudStep Title="Venda">
                                 <MudItem xs="12" sm="12">
                                     <MudItem xs="12" sm="12" Class="d-flex">
@@ -50,24 +72,6 @@
                                         </MudCardContent>
                                     </MudItem>
                                 </MudItem>
-                            </MudStep>
-                            <MudStep Title="Assentos">
-                                <MudGrid>
-                                    @foreach (Assento assento in assentos)
-                                    {
-                                        Console.WriteLine(assento.Numero);
-                                        <MudItem xs="1">
-                                            <MudPaper Class="@($"{GetClasse(assento)} d-flex align-center justify-center")"
-                                            Style="width: 100%; height: 80px;" 
-                                            @onclick="() => AlternarSelecao(assento)" 
-                                            Disabled="@assento.Ocupado" 
-                                            Elevation="1">@assento.Numero
-                                            </MudPaper>
-                                        </MudItem>
-                                    }
-                                </MudGrid>
-                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal.ToString("C2")</MudText>
-
                             </MudStep>
                             <MudStep Title="Pagamento">Dados de pagamento</MudStep>
                         </ChildContent>
