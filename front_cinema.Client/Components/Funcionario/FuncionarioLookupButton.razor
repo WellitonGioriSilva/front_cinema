@@ -1,0 +1,27 @@
+@using front_cinema.Client.Models
+
+
+<MudTextField T="string" Label="Funcionario" Variant="Variant.Outlined" Adornment="Adornment.End"
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
+    Value="@SelectedFuncionario?.Nome" />
+<MudTextField T="string" Value="@SelectedFuncionario?.Id.ToString()" style="display:none;" InputId="id_funcionario" />
+
+@code {
+    Funcionario SelectedFuncionario;
+
+    private async Task OpenLookupDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+        var dialog = DialogService.Show<FuncionarioLookupDialog>("Selecionar Funcionario", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            SelectedFuncionario = (Funcionario)result.Data;
+        }
+    }
+
+    [Inject] IDialogService DialogService { get; set; }
+}

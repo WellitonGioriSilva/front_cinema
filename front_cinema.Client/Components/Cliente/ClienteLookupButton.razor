@@ -1,0 +1,33 @@
+@using front_cinema.Client.Models
+
+
+<MudTextField T="string" Label="Cliente" Variant="Variant.Outlined" Adornment="Adornment.End"
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@SelectedCliente?.Nome" />
+<MudTextField T="string" Value="@SelectedCliente?.Id.ToString()" style="display:none;" InputId="id_cliente" />
+
+@code {
+    Cliente SelectedCliente;
+    [Parameter]
+    public EventCallback<int> OnClienteSelecionada { get; set; }
+
+    private async Task OpenLookupDialog()
+    {
+        var parameters = new DialogParameters();
+        var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+
+        var dialog = DialogService.Show<ClienteLookupDialog>("Selecionar Cliente", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            SelectedCliente = (Cliente)result.Data;
+            if (SelectedCliente != null)
+            {
+                await OnClienteSelecionada.InvokeAsync(SelectedCliente.Id);
+            }
+        }
+    }
+
+    [Inject] IDialogService DialogService { get; set; }
+}

@@ -1,0 +1,35 @@
+@using front_cinema.Client.Models
+
+
+<MudTextField T="string" Label="Caixa" Variant="Variant.Outlined" Adornment="Adornment.End"
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
+    Value="@SelectedCaixa?.DtIni.ToString("dd/MM/yyyy")" />
+<MudTextField T="string" Value="@SelectedCaixa?.Id.ToString()" style="display:none;" InputId="id_caixa" />
+
+@code {
+    [Parameter]
+    public int IdFilme { get; set; }
+    [Parameter]
+    public EventCallback<int> OnCaixaSelecionada { get; set; }
+    Caixa SelectedCaixa;
+
+    private async Task OpenLookupDialog()
+    {
+        var parameters = new DialogParameters { { "IdFilme", IdFilme } };
+        var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+        var dialog = DialogService.Show<CaixaLookupDialog>("Selecionar Caixa", parameters, options);
+        var result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            SelectedCaixa = (Caixa)result.Data;
+            if (SelectedCaixa != null)
+            {
+                await OnCaixaSelecionada.InvokeAsync(SelectedCaixa.Id);
+            }
+        }
+    }
+
+    [Inject] IDialogService DialogService { get; set; }
+}

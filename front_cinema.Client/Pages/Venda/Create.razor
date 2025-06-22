@@ -8,75 +8,127 @@
 @using System.Text.Json
 @using front_cinema.Client.Components.Filme
 @using front_cinema.Client.Components.Sessao
+@using front_cinema.Client.Components.Cliente
+@using front_cinema.Client.Components.Caixa
+@using front_cinema.Client.Components.FormaPagamento
 @using front_cinema.Client.Models
+@inject ISnackbar Snackbar
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
 <MudGrid>
     <MudItem xs="12">
-        <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
-            <DataAnnotationsValidator/>
+        <EditForm Model="@venda" OnValidSubmit="OnValidSubmit">
+            <DataAnnotationsValidator />
             <MudGrid>
                 <MudItem xs="12" Class="pt-0">
                     @* <MudPaper Style="width: 100%"> *@
-                    <MudStepper ShowResetButton>
+                    <MudStepper ShowResetButton ActiveIndexChanged="OnStepChanged">
                         <ChildContent>
                             <MudStep Title="Filme" Class="gap-3 d-flex">
                                 <MudItem xs="12">
-                                    <FilmeLookupButton OnFilmeSelecionado="OnFilmeSelecionado"/>
+                                    <FilmeLookupButton OnFilmeSelecionado="OnFilmeSelecionado" />
                                 </MudItem>
                                 <MudItem xs="12">
-                                    <SessaoLookupButton IdFilme="@idFilmeSelecionado" OnsessaoSelecionada="OnsessaoSelecionada"/>
+                                    <SessaoLookupButton IdFilme="@idFilmeSelecionado"
+                                    OnSessaoSelecionada="OnSessaoSelecionada" />
                                 </MudItem>
                             </MudStep>
                             <MudStep Title="Assentos">
-                                @if(assentos.Count() > 0){
+                                @if (assentos.Count() > 0)
+                                {
                                     <MudGrid>
                                         @foreach (Assento assento in assentos)
                                         {
-                                            Console.WriteLine(assento.Numero);
                                             <MudItem xs="1">
                                                 <MudPaper Class="@($"{GetClasse(assento)} d-flex align-center justify-center")"
-                                                Style="width: 100%; height: 80px;" 
-                                                @onclick="() => AlternarSelecao(assento)" 
-                                                Disabled="@assento.Ocupado" 
-                                                Elevation="1">@assento.Numero
+                                                Style="width: 100%; height: 80px;" @onclick="() => AlternarSelecao(assento)"
+                                                Disabled="@assento.Ocupado" Elevation="1">@assento.Numero
                                                 </MudPaper>
                                             </MudItem>
                                         }
                                     </MudGrid>
-                                }else{
-                                    <MudText >Selecione um Filme e uma Sessão para selecionar os assentos!</MudText>
                                 }
-                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal.ToString("C2")</MudText>
+                                else
+                                {
+                                    <MudText>Selecione um Filme e uma Sessão para selecionar os Assentos!</MudText>
+                                }
+                                <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total: @subTotal.ToString("C2")
+                                </MudText>
 
                             </MudStep>
                             <MudStep Title="Venda">
-                                <MudItem xs="12" sm="12">
-                                    <MudItem xs="12" sm="12" Class="d-flex">
-                                        <MudCardContent Style="width: 20%">
-                                            <MudDatePicker Label="Data" Variant="Variant.Outlined"/>
-                                        </MudCardContent>
-                                        <MudCardContent Style="width: 35%">
-                                            <MudTextField Variant="Variant.Outlined" Label="First name" HelperText="Max. 8 characters"
-                                            @bind-Value="model.Email" For="@(() => model.Email)"/>
-                                        </MudCardContent>
-                                        @* <MudCardActions>
-                                                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
-                                            </MudCardActions> *@
+                                @if (assentos.Count() > 0)
+                                {
+                                    <MudItem xs="12" sm="12">
+                                        <MudItem xs="12" sm="12" Class="d-flex">
+                                            <MudCardContent Style="width: 50%">
+                                                <ClienteLookupButton OnClienteSelecionada="OnClienteSelecionada"/>
+                                            </MudCardContent>
+                                            <MudCardContent Style="width: 50%">
+                                                <CaixaLookupButton OnCaixaSelecionada="OnCaixaSelecionada"/>
+                                            </MudCardContent>
+                                        </MudItem>
+                                        <MudItem xs="12" sm="12" Class="d-flex pt-0">
+                                            <MudCardContent Style="width: 32%">
+                                                <MudDatePicker Label="Data"
+                                                Variant="Variant.Outlined" @bind-Date="data"/>
+                                            </MudCardContent>
+                                            <MudCardContent Style="width: 32%">
+                                                <MudNumericField @bind-Value="quantidadeMeiaEntrada" Label="Meias-Entradas"
+                                                Variant="Variant.Outlined"
+                                                Disabled="@(sessaoSelecionada is null || sessaoSelecionada?.Meia == false)"
+                                                TextChanged="OnAdicionaMeiaEntrada" />
+                                            </MudCardContent>
+                                            <MudCardContent Style="width: 32%">
+                                                <MudNumericField @bind-Value="quantidadeEntradaInteiras"
+                                                Label="Entradas Inteiras" Variant="Variant.Outlined" Disabled="true" />
+                                            </MudCardContent>
+                                        </MudItem>
+                                        <MudText Style="margin-top: 20px;" Typo="Typo.h6">Sub-Total:
+                                            @subTotal.ToString("C2")
+                                        </MudText>
                                     </MudItem>
-                                    <MudItem xs="12" sm="12" Class="d-flex pt-0">
-                                        <MudCardContent Style="width: 35%">
-                                            <MudTextField Variant="Variant.Outlined" Label="First name" HelperText="Max. 8 characters"
-                                            @bind-Value="model.Username" For="@(() => model.Username)"/>
-                                        </MudCardContent>
-                                    </MudItem>
-                                </MudItem>
+                                }
+                                else
+                                {
+                                    <MudText>Selecione um Filme e uma Sessão para selecionar os dados da Venda!</MudText>
+                                }
                             </MudStep>
-                            <MudStep Title="Pagamento">Dados de pagamento</MudStep>
+                            <MudStep Title="Pagamento">
+                                @if (assentos.Count() > 0)
+                                {
+                                    <MudItem xs="12" sm="12" Class="d-flex">
+                                        <MudCardContent Style="width: 50%">
+                                            <FormaPagamentoLookupButton OnFormaPagamentoSelecionado="OnFormaPagamentoSelecionado"/>
+                                        </MudCardContent>
+                                        <MudCardContent Style="width: 50%">
+                                            <MudNumericField Immediate="false" Label="Desconto" Format="N2" T="double?"
+                                            @bind-Value="desconto" TextChanged="OnDesconto"
+                                            Variant="Variant.Outlined" Min="0"/>
+                                        </MudCardContent>
+                                    </MudItem>
+                                    <MudGrid Class="mt-1">
+                                        <MudItem xs="6">
+                                            <MudText Typo="Typo.h6">
+                                                Sub-Total: @subTotal.ToString("C2")
+                                            </MudText>
+                                        </MudItem>
+                                        <MudItem xs="6" Class="d-flex justify-end">
+                                            <MudText Typo="Typo.h6">
+                                                Total: @total.ToString("C2")
+                                            </MudText>
+                                        </MudItem>
+                                    </MudGrid>
+                                }
+                                else
+                                {
+                                    <MudText>Selecione um Filme e uma Sessão para selecionar os dados de Pagamento!</MudText>
+                                }
+                            </MudStep>
                         </ChildContent>
                         <CompletedContent>
-                            Botão de Salvar
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="Submit">Salvar</MudButton>
                         </CompletedContent>
                     </MudStepper>
                     @* </MudPaper> *@
@@ -97,8 +149,9 @@
 
     .assento-selecionado {
     background-color: #4caf50;
-    color: rgb(39,39,47);
+    color: rgb(39, 39, 47);
     }
+
     .assento-ocupado {
     background-color: #757575;
     cursor: not-allowed;
@@ -109,8 +162,20 @@
 
 @code {
     private double subTotal = 0;
+    private double total = 0;
+    private double? desconto = 0;
+    private DateTime? data = DateTime.Today;
+
+    private int quantidadeMeiaEntrada = 0;
+    private int quantidadeEntradaInteiras = 0;
+    private int totalIngressos = 0;
+    private int idCaixaSelecionado = 0;
+    private int idClienteSelecionado = 0;
     private int idFilmeSelecionado = 0;
+    private int idFormaPagamentoSelecionado = 0;
     private Sessao sessaoSelecionada;
+
+    private Venda venda = new Venda();
 
     @* Assentos *@
     List<Assento> assentos = new List<Assento>();
@@ -120,15 +185,98 @@
 
     }
 
+    @* Submit *@
+    async Task Submit()
+    {
+        venda.Cliente ??= new Cliente();
+        venda.Caixa ??= new Caixa();
+        venda.FormaPagamento ??= new FormaPagamento();
+
+        venda.Cliente.Id = idClienteSelecionado;
+        venda.Caixa.Id = idCaixaSelecionado;
+        venda.FormaPagamento.Id = idFormaPagamentoSelecionado;
+        venda.Data = data ?? DateTime.Today;
+        venda.Desconto = desconto ?? 0;
+        venda.Total = total;
+        venda.SubTotal = subTotal;
+
+        List<Assento> assentosSelecionados = new();
+        foreach (Assento assento in assentos)
+        {
+            if (assento != null &&  assento.Id != null && assento.Id != 0 && assento.Selecionado)
+            {
+                assentosSelecionados.Add(new Assento
+                {
+                    Id = assento.Id,
+                    Numero = assento.Numero
+                });
+            }
+        }
+        var assentosAnonimos = assentosSelecionados.Select(a => new { _id = a.Id, _numero = a.Numero }).ToArray();
+
+        var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
+
+        var url = $"{baseUrl}/venda";
+        var body = new
+        {
+            _venda = new
+            {
+                _subTotal = venda.SubTotal,
+                _data = venda.Data,
+                _desconto = venda.Desconto,
+                _total = venda.Total,
+                _clienteId = venda.Cliente.Id,
+                _caixaId = venda.Caixa.Id,
+                _formaPagamentoId = venda.FormaPagamento.Id
+            },
+            _assentos = assentosAnonimos,
+            _sessaoId = sessaoSelecionada.Id,
+            _quantidadeMeiaEntrada = quantidadeMeiaEntrada
+        };
+        var response = await _http.PostAsJsonAsync($"{url}", body);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            var json = await response.Content.ReadAsStringAsync();
+            var errors = JsonSerializer.Deserialize<ResponseApi>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            if (errors?.Errors != null)
+            {
+                foreach (var errorList in errors.Errors.Values)
+                {
+                    foreach (var message in errorList)
+                    {
+                        Snackbar.Add(message, Severity.Error);
+                    }
+                }
+            }
+
+            return;
+        }
+        else
+        {
+            Snackbar.Add("Venda realizada com sucesso!", Severity.Success);
+        }
+    }
 
     @* Classes Assentos *@
     void AlternarSelecao(Assento assento)
     {
         assento.Selecionado = !assento.Selecionado;
-        if(assento.Selecionado == true){
+        if (assento.Selecionado)
+        {
             subTotal += sessaoSelecionada.Valor;
-        }else{
+            quantidadeEntradaInteiras++;
+            totalIngressos++;
+        }
+        else
+        {
             subTotal -= sessaoSelecionada.Valor;
+            quantidadeEntradaInteiras--;
+            totalIngressos--;
         }
     }
     string GetClasse(Assento assento)
@@ -136,7 +284,6 @@
         if (assento.Ocupado) return "assento assento-ocupado";
         return "assento " + (assento.Selecionado ? "assento-selecionado" : "assento-livre");
     }
-
     async void GetAssentosAsync()
     {
         try
@@ -190,29 +337,7 @@
     }
 
     @* Validação padrão do MudBlazor *@
-    RegisterAccountForm model = new RegisterAccountForm();
     bool success;
-
-    public class RegisterAccountForm
-    {
-        [Required]
-        [StringLength(8, ErrorMessage = "Name length can't be more than 8.")]
-        public string Username { get; set; }
-
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        [Required]
-        [StringLength(30, ErrorMessage = "Password must be at least 8 characters long.", MinimumLength = 8)]
-        public string Password { get; set; }
-
-        [Required]
-        [Compare(nameof(Password))]
-        public string Password2 { get; set; }
-
-    }
-
     private void OnValidSubmit(EditContext context)
     {
         success = true;
@@ -225,10 +350,81 @@
         idFilmeSelecionado = id;
     }
 
-@* Retorna id do filme selecionado *@
-    private void OnsessaoSelecionada(Sessao sessao)
+    @* Retorna id do caixa selecionado *@
+    private void OnCaixaSelecionada(int id)
+    {
+        idCaixaSelecionado = id;
+    }
+
+    @* Retorna id do cliente selecionado *@
+    private void OnClienteSelecionada(int id)
+    {
+        idClienteSelecionado = id;
+    }
+
+    @* Retorna id do cliente selecionado *@
+    private void OnFormaPagamentoSelecionado(int id)
+    {
+        idFormaPagamentoSelecionado = id;
+    }
+
+    @* Retorna id do filme selecionado *@
+    private void OnSessaoSelecionada(Sessao sessao)
     {
         sessaoSelecionada = sessao;
         GetAssentosAsync();
+    }
+
+    @* Controle de Meia Entrada *@
+    private void OnAdicionaMeiaEntrada()
+    {
+        if (quantidadeMeiaEntrada > 0 && totalIngressos >= quantidadeMeiaEntrada)
+        {
+            quantidadeEntradaInteiras = totalIngressos - quantidadeMeiaEntrada;
+        }
+        else if (quantidadeMeiaEntrada == 0)
+        {
+            quantidadeEntradaInteiras = totalIngressos;
+        }
+        else
+        {
+            quantidadeMeiaEntrada = 0;
+            quantidadeEntradaInteiras = totalIngressos;
+        }
+        if (sessaoSelecionada != null)
+        {
+            subTotal = (sessaoSelecionada.Valor * quantidadeEntradaInteiras) + ((sessaoSelecionada.Valor / 2) *
+            quantidadeMeiaEntrada);
+
+            OnCalculaDesconto();
+        }
+    }
+
+    @* Ao resetar o formulario *@
+    private void OnStepChanged(int step)
+    {
+        if (step == 0)
+        {
+            subTotal = 0;
+            total = 0;
+            desconto = 0;
+            quantidadeMeiaEntrada = 0;
+            quantidadeEntradaInteiras = 0;
+            totalIngressos = 0;
+            idFilmeSelecionado = 0;
+            sessaoSelecionada = null;
+            assentos = new List<Assento>();
+        }
+    }
+
+    @* Ao alterar campo de desconto *@
+    private void OnDesconto()
+    {
+        OnCalculaDesconto();
+    }
+
+    private void OnCalculaDesconto()
+    {
+        total = subTotal - desconto ?? 0;
     }
 }

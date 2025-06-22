@@ -1,0 +1,93 @@
+@using MudBlazor
+@using front_cinema.Client.Models
+@using System.Net.Http.Json;
+@using Microsoft.AspNetCore.WebUtilities
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@inject IConfiguration Configuration
+@inject HttpClient _http
+
+<MudDialog>
+    <DialogContent>
+        <MudDatePicker Label="Data" Variant="Variant.Outlined" TextChanged="OnChangeSearch" Immediate="true" />
+        <MudTable Items="_sessoes" Hover="true" Bordered="true">
+            <HeaderContent>
+                <MudTh>Id</MudTh>
+                <MudTh>Data</MudTh>
+                <MudTh></MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>@context.Id</MudTd>
+                <MudTd>@context.DtIni.ToString("dd/MM/yyyy")</MudTd>
+                <MudTd>
+                    <MudButton Color="Color.Primary" Size="Size.Small" OnClick="@(() => Selected(context))">
+                        Selecionar
+                    </MudButton>
+                </MudTd>
+            </RowTemplate>
+        </MudTable>
+    </DialogContent>
+    <DialogActions>
+        @* <MudButton OnClick="() => MudDialog.Cancel()">Cancelar</MudButton> *@
+    </DialogActions>
+</MudDialog>
+
+@code {
+    @* Parâmetros para filtro *@
+    [Parameter]
+    public int IdFilme { get; set; }
+
+    int _id = 0;
+    DateTime? _data;
+
+    [CascadingParameter]
+    private IMudDialogInstance MudDialog { get; set; }
+
+    @* Inicializa lista de sessoes *@
+    List<Caixa> _sessoes = new List<Caixa>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetSessoesAsync();
+    }
+
+    @* Seleciona o Caixa - Colocar try catch*@
+    void Selected(Caixa caixa)
+    {
+        MudDialog.Close(DialogResult.Ok<Caixa>(caixa));
+    }
+
+    @* Chama Api *@
+    async Task<List<Caixa>> GetSessoesAsync()
+    {
+        try
+        {
+            var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
+            var queryParams = new Dictionary<string, string> { };
+            if (IdFilme != 0 && IdFilme != null)
+            {
+                queryParams.Add("id_filme_fk", IdFilme.ToString());
+            }
+
+            if (_data.HasValue)
+            {
+                queryParams.Add("data", _data?.ToString("yyyy-MM-dd"));
+            }
+            var url = QueryHelpers.AddQueryString($"{baseUrl}/caixa", queryParams);
+            _sessoes = await _http.GetFromJsonAsync<List<Caixa>>($"{url}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        return _sessoes;
+    }
+
+    @* Ao alterar texto de busca - Colocar try catch *@
+    private async Task OnChangeSearch(string value)
+    {
+        _data = Convert.ToDateTime(value);
+        await GetSessoesAsync();
+    }
+}
