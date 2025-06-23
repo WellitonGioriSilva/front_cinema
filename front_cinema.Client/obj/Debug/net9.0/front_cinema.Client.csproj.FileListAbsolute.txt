@@ -202,8 +202,8 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\D
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.5nhp1wfg9b.js
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\icudt.oh1zvcfom8.dat
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.mcz29355n0.wasm
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.707ab5v1o7.pdb
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ejglyp2bh6.wasm
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.m0c9h8bqcr.pdb
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.phaa9r44xv.wasm.gz
@@ -409,8 +409,8 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\D
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.5nhp1wfg9b.js.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\dotnet.runtime.js.map.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\icudt.oh1zvcfom8.dat.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.mcz29355n0.wasm.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.707ab5v1o7.pdb.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.ejglyp2bh6.wasm.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\front_cinema.Client.m0c9h8bqcr.pdb.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\front_cinema.Client.staticwebassets.runtime.json
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\bin\Debug\net9.0\front_cinema.Client.staticwebassets.endpoints.json
@@ -1034,9 +1034,9 @@ C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\D
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\2f44ssbqp1-5nhp1wfg9b.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\kv96ifw41h-sw8h8rjm4u.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\p7wpxzljqd-oh1zvcfom8.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-mcz29355n0.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-707ab5v1o7.gz
-C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-4a39mqmgh5.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\wmppuak9b4-ejglyp2bh6.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\fdq0ojddfs-m0c9h8bqcr.gz
+C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\compressed\02i4ktzhsf-9a9olha457.gz
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\obj\Debug\net9.0\staticwebassets.development.json

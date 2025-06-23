@@ -1,6 +1,5 @@
 @page "/venda/create"
 
-
 @inject IConfiguration Configuration
 @inject HttpClient _http
 @using System.ComponentModel.DataAnnotations
@@ -13,6 +12,7 @@
 @using front_cinema.Client.Components.FormaPagamento
 @using front_cinema.Client.Models
 @inject ISnackbar Snackbar
+@inject NavigationManager NavigationManager
 
 <PageTitle>Venda</PageTitle>
 <MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
@@ -259,6 +259,7 @@
         else
         {
             Snackbar.Add("Venda realizada com sucesso!", Severity.Success);
+            NavigationManager.NavigateTo("/venda");
         }
     }
 
