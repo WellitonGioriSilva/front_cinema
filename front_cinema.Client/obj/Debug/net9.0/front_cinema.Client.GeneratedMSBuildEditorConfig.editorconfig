@@ -75,6 +75,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGdW5jaW9uYXJpb1xGdW5jaW9uYXJpb0xvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Geral/DialogoDelecao.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHZXJhbFxEaWFsb2dvRGVsZWNhby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXNzYW9cU2Vzc2FvTG9va3VwQnV0dG9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -99,12 +103,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Venda/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFcQ3JlYXRlLnJhem9y
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/VendaIngresso/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFJbmdyZXNzb1xDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Venda/List.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFcTGlzdC5yYXpvcg==
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/VendaIngresso/List.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFJbmdyZXNzb1xMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Weather.razor]

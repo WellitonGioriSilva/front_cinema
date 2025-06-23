@@ -1,4 +1,4 @@
-@page "/venda/create"
+@page "/venda/ingresso/create"
 
 @inject IConfiguration Configuration
 @inject HttpClient _http
@@ -14,8 +14,8 @@
 @inject ISnackbar Snackbar
 @inject NavigationManager NavigationManager
 
-<PageTitle>Venda</PageTitle>
-<MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda</MudText>
+<PageTitle>Venda de Ingressos</PageTitle>
+<MudText class="mt-5 mb-5" Typo="Typo.h4" GutterBottom="true">Venda de Ingressos</MudText>
 <MudGrid>
     <MudItem xs="12">
         <EditForm Model="@venda" OnValidSubmit="OnValidSubmit">
@@ -214,9 +214,9 @@
         }
         var assentosAnonimos = assentosSelecionados.Select(a => new { _id = a.Id, _numero = a.Numero }).ToArray();
 
-        var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
+        
 
-        var url = $"{baseUrl}/venda";
+        var url = $"venda/ingresso";
         var body = new
         {
             _venda = new
@@ -259,7 +259,7 @@
         else
         {
             Snackbar.Add("Venda realizada com sucesso!", Severity.Success);
-            NavigationManager.NavigateTo("/venda");
+            NavigationManager.NavigateTo("/venda/ingresso");
         }
     }
 
@@ -289,14 +289,14 @@
     {
         try
         {
-            var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
+            
             var queryParams = new Dictionary<string, string> { };
             if (sessaoSelecionada.Id != 0 && sessaoSelecionada.Id != null)
             {
                 queryParams.Add("idSessao", sessaoSelecionada.Id.ToString());
             }
 
-            var url = QueryHelpers.AddQueryString($"{baseUrl}/assento/livre", queryParams);
+            var url = QueryHelpers.AddQueryString($"assento/livre", queryParams);
             var response = await _http.GetStreamAsync($"{url}");
             using var json = await JsonDocument.ParseAsync(response);
 

@@ -70,7 +70,7 @@
     {
         try
         {
-            var baseUrl = Configuration.GetValue<string>("apiBaseUrl");
+
             var queryParams = new Dictionary<string, string> { };
             if (IdFilme != 0 && IdFilme != null)
             {
@@ -81,7 +81,7 @@
             {
                 queryParams.Add("data", _data?.ToString("yyyy-MM-dd"));
             }
-            var url = QueryHelpers.AddQueryString($"{baseUrl}/sessao", queryParams);
+            var url = QueryHelpers.AddQueryString($"sessao", queryParams);
             _sessoes = await _http.GetFromJsonAsync<List<Sessao>>($"{url}");
         }
         catch (Exception ex)
