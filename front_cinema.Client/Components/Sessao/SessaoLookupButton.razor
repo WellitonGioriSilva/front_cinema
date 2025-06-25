@@ -3,10 +3,15 @@
 
 <MudTextField T="string" Label="Sessão" Variant="Variant.Outlined" Adornment="Adornment.End"
     AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
-    Value="@SelectedSessao?.Data.ToString("dd/MM/yyyy")" />
-<MudTextField T="string" Value="@SelectedSessao?.Id.ToString()" style="display:none;" InputId="id_sessao" />
+    Value="@dataSessao?.ToString("dd/MM/yyyy")" />
+<MudTextField T="string" Value="@idSessao.ToString()" style="display:none;" InputId="id_sessao" />
 
 @code {
+    [Parameter]
+    public int? idSessao { get; set; }
+    [Parameter]
+    public DateTime? dataSessao { get; set; }
+
     [Parameter]
     public int IdFilme { get; set; }
     [Parameter]
@@ -26,6 +31,8 @@
             SelectedSessao = (Sessao)result.Data;
             if (SelectedSessao != null)
             {
+                idSessao = SelectedSessao.Id;
+                dataSessao = SelectedSessao.Data;
                 await OnSessaoSelecionada.InvokeAsync(SelectedSessao);
             }
         }

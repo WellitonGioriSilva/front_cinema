@@ -2,13 +2,18 @@
 
 
 <MudTextField T="string" Label="Cliente" Variant="Variant.Outlined" Adornment="Adornment.End"
-    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@SelectedCliente?.Nome" />
-<MudTextField T="string" Value="@SelectedCliente?.Id.ToString()" style="display:none;" InputId="id_cliente" />
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@nomeCliente" />
+<MudTextField T="string" Value="@idCliente.ToString()" style="display:none;" InputId="id_cliente" />
 
 @code {
-    Cliente SelectedCliente;
+    [Parameter]
+    public int? idCliente {get; set;}
+    [Parameter]
+    public string? nomeCliente {get; set;}
+    
     [Parameter]
     public EventCallback<int> OnClienteSelecionada { get; set; }
+    Cliente SelectedCliente;
 
     private async Task OpenLookupDialog()
     {
@@ -24,6 +29,8 @@
             SelectedCliente = (Cliente)result.Data;
             if (SelectedCliente != null)
             {
+                idCliente = SelectedCliente?.Id;
+                nomeCliente = SelectedCliente?.Nome;
                 await OnClienteSelecionada.InvokeAsync(SelectedCliente.Id);
             }
         }

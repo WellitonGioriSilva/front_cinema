@@ -2,10 +2,15 @@
 
 
 <MudTextField T="string" Label="Filme" Variant="Variant.Outlined" Adornment="Adornment.End"
-    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@SelectedFilme?.Nome" />
-<MudTextField T="string" Value="@SelectedFilme?.Id.ToString()" style="display:none;" InputId="id_filme" />
+    AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog" Value="@nomeFilme" />
+<MudTextField T="string" Value="@idFilme.ToString()" style="display:none;" InputId="id_filme" />
 
 @code {
+    [Parameter]
+    public int? idFilme {get; set;}
+    [Parameter]
+    public string? nomeFilme {get; set;}
+    
     [Parameter]
     public EventCallback<int> OnFilmeSelecionado { get; set; }
 
@@ -24,6 +29,8 @@
             SelectedFilme = (Filme)result.Data;
             if (SelectedFilme != null)
             {
+                idFilme = SelectedFilme?.Id;
+                nomeFilme = SelectedFilme?.Nome;
                 await OnFilmeSelecionado.InvokeAsync(SelectedFilme.Id);
             }
         }
