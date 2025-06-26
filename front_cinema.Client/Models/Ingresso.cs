@@ -16,7 +16,7 @@ namespace front_cinema.Client.Models
         [JsonPropertyName("_caixa")]
         public Venda Venda { get; set; }
 
-        [JsonPropertyName("_formaPagamento")]
+        [JsonPropertyName("_assento")]
         public Assento Assento { get; set; }
 
 
