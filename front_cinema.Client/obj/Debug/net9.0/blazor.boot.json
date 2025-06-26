@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "front_cinema.Client",
   "resources": {
-    "hash": "sha256-EEwe30Mqq8k8Yym/9ECBk8TjA55I3ZQUVWGaCHzeV1Q=",
+    "hash": "sha256-RD2+ahSclKRgUhFddS1Zus0DDWvc5FVbR0O93kiHJcc=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.phaa9r44xv.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.4o2vz6uw5j.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -204,8 +204,8 @@
       "dotnet.native.p4lwlf2bu1.wasm": "dotnet.native.wasm",
       "dotnet.runtime.o8gq1i8bk6.js": "dotnet.runtime.js",
       "icudt.oh1zvcfom8.dat": "icudt.dat",
-      "front_cinema.Client.i20jgq2f1c.wasm": "front_cinema.Client.wasm",
-      "front_cinema.Client.gsec4b0r4b.pdb": "front_cinema.Client.pdb"
+      "front_cinema.Client.hwv8mhi05f.wasm": "front_cinema.Client.wasm",
+      "front_cinema.Client.8i5npr8ty5.pdb": "front_cinema.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hmanx9razn.js": "sha256-d7UNSArplVrX3arY2Kmhxp1wN79ng8hLqIBrkiQ9Gbo="
@@ -418,10 +418,10 @@
       "WindowsBase.377bly7twj.wasm": "sha256-0VmBdMjdc0nZGHDSfaGirT6y3mJTM0qx8eqCUC/rpiE=",
       "mscorlib.o0184ey5ia.wasm": "sha256-2GxNKZQJVJvYMUxSTuXa5V2qxawSMMHZtwG33SKVCZU=",
       "netstandard.hb3h2rr8mk.wasm": "sha256-DWn9+RH/ElZQ6imlYqVwZvir1KTzNwY18AzGmnyiymU=",
-      "front_cinema.Client.i20jgq2f1c.wasm": "sha256-5uAO76wDlIPBjh9z4y0ZsNb3vwfAmnxRcAP7zkkB4kw="
+      "front_cinema.Client.hwv8mhi05f.wasm": "sha256-f9IQl4T0aVndUu+wtwJg2lhmKZfeJKxt08bcRMd+YcM="
     },
     "pdb": {
-      "front_cinema.Client.gsec4b0r4b.pdb": "sha256-4CXFV7q6cBlpjUDWTsiZBeoKHeXidbZ+9Py+DBH0iQk="
+      "front_cinema.Client.8i5npr8ty5.pdb": "sha256-YL+D5I6ocvez2UFwF0C+YGiyUw8qLWSA0w7LkBVc8OY="
     }
   },
   "cacheBootResources": true,

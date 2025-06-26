@@ -3,22 +3,24 @@
 
 <MudTextField T="string" Label="Caixa" Variant="Variant.Outlined" Adornment="Adornment.End"
     AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
-    Value="@SelectedCaixa?.DtIni.ToString("dd/MM/yyyy")" />
-<MudTextField T="string" Value="@SelectedCaixa?.Id.ToString()" style="display:none;" InputId="id_caixa" />
+    Value="@dataCaixa?.ToString("dd/MM/yyyy")" />
+<MudTextField T="string" Value="@idCaixa.ToString()" style="display:none;" InputId="id_caixa" />
 
 @code {
     [Parameter]
-    public int IdFilme { get; set; }
+    public int? idCaixa {get; set;}
+    [Parameter]
+    public DateTime? dataCaixa {get; set;}
+
     [Parameter]
     public EventCallback<int> OnCaixaSelecionada { get; set; }
     Caixa SelectedCaixa;
 
     private async Task OpenLookupDialog()
     {
-        var parameters = new DialogParameters { { "IdFilme", IdFilme } };
         var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
 
-        var dialog = DialogService.Show<CaixaLookupDialog>("Selecionar Caixa", parameters, options);
+        var dialog = DialogService.Show<CaixaLookupDialog>("Selecionar Caixa", null, options);
         var result = await dialog.Result;
 
         if (!result.Canceled)
@@ -26,6 +28,8 @@
             SelectedCaixa = (Caixa)result.Data;
             if (SelectedCaixa != null)
             {
+                idCaixa = SelectedCaixa.Id;
+                dataCaixa = SelectedCaixa.DtIni;
                 await OnCaixaSelecionada.InvokeAsync(SelectedCaixa.Id);
             }
         }

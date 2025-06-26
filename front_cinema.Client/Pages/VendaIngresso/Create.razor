@@ -170,7 +170,7 @@
     private int quantidadeEntradaInteiras = 0;
     private int totalIngressos = 0;
     private int idCaixaSelecionado = 0;
-    private int idClienteSelecionado = 0;
+    private Cliente clienteSelecionado;
     private int idFilmeSelecionado = 0;
     private int idFormaPagamentoSelecionado = 0;
     private Sessao sessaoSelecionada;
@@ -192,7 +192,7 @@
         venda.Caixa ??= new Caixa();
         venda.FormaPagamento ??= new FormaPagamento();
 
-        venda.Cliente.Id = idClienteSelecionado;
+        venda.Cliente.Id = clienteSelecionado.Id;
         venda.Caixa.Id = idCaixaSelecionado;
         venda.FormaPagamento.Id = idFormaPagamentoSelecionado;
         venda.Data = data ?? DateTime.Today;
@@ -358,9 +358,9 @@
     }
 
     @* Retorna id do cliente selecionado *@
-    private void OnClienteSelecionada(int id)
+    private void OnClienteSelecionada(Cliente cliente)
     {
-        idClienteSelecionado = id;
+        clienteSelecionado = cliente;
     }
 
     @* Retorna id do cliente selecionado *@

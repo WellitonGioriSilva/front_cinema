@@ -18,7 +18,7 @@
 <form action="">
     <MudGrid Spacing="2" Class="align-center" Justify="Justify.SpaceBetween">
         <MudItem xs="12" md="8" Class="py-2">
-            <ClienteLookupButton OnClienteSelecionada="OnClienteSelecionada" />
+            <ClienteLookupButton idCliente="@idCliente" nomeCliente="@nomeCliente" OnClienteSelecionada="OnClienteSelecionada" />
         </MudItem>
 
         <MudItem xs="12" md="2" Class="py-2 d-flex justify-end">
@@ -72,7 +72,8 @@
 
 @code {
     private List<Venda> vendas = new List<Venda>();
-    private int idClienteSelecionado = 0;
+    private int idCliente;
+    private string nomeCliente;
 
     protected override async Task OnInitializedAsync()
     {
@@ -80,14 +81,16 @@
     }
 
     @* Retorna id do cliente selecionado *@
-    async void OnClienteSelecionada(int id)
+    async void OnClienteSelecionada(Cliente cliente)
     {
-        idClienteSelecionado = id;
+        idCliente = cliente.Id;
+        nomeCliente = cliente.Nome;
         await GetVendasAsync();
     }
     async void LimparFiltros()
     {
-        idClienteSelecionado = 0;
+        idCliente = 0;
+        nomeCliente = "";
         await GetVendasAsync();
     }
 
@@ -97,9 +100,9 @@
         try
         {
             var queryParams = new Dictionary<string, string> { };
-            if (idClienteSelecionado != 0)
+            if (idCliente != 0)
             {
-                queryParams.Add("idCliente", idClienteSelecionado.ToString());
+                queryParams.Add("idCliente", idCliente.ToString());
             }
             var url = QueryHelpers.AddQueryString($"venda/ingresso", queryParams);
             vendas = await _http.GetFromJsonAsync<List<Venda>>($"{url}");
@@ -122,11 +125,11 @@
     private async Task OnDelete(Venda venda)
     {
         var parameters = new DialogParameters<DialogoDelecao>
-{
-{ x => x.ContentText, "Deseja realmente deletar essa venda?" },
-{ x => x.ButtonText, "Deletar" },
-{ x => x.Color, Color.Error }
-};
+        {
+        { x => x.ContentText, "Deseja realmente deletar essa venda?" },
+        { x => x.ButtonText, "Deletar" },
+        { x => x.Color, Color.Error }
+        };
 
         var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 

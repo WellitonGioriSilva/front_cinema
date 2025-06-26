@@ -12,7 +12,7 @@
     public string? nomeCliente {get; set;}
     
     [Parameter]
-    public EventCallback<int> OnClienteSelecionada { get; set; }
+    public EventCallback<Cliente> OnClienteSelecionada { get; set; }
     Cliente SelectedCliente;
 
     private async Task OpenLookupDialog()
@@ -31,7 +31,7 @@
             {
                 idCliente = SelectedCliente?.Id;
                 nomeCliente = SelectedCliente?.Nome;
-                await OnClienteSelecionada.InvokeAsync(SelectedCliente.Id);
+                await OnClienteSelecionada.InvokeAsync(SelectedCliente);
             }
         }
     }

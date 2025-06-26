@@ -3,14 +3,18 @@
 
 <MudTextField T="string" Label="Forma de Pagamento" Variant="Variant.Outlined" Adornment="Adornment.End"
     AdornmentIcon="@Icons.Material.Filled.Search" OnAdornmentClick="@OpenLookupDialog"
-    Value="@SelectedFormaPagamento?.Nome" />
-<MudTextField T="string" Value="@SelectedFormaPagamento?.Id.ToString()" style="display:none;"
+    Value="@nomeFormaPagamento" />
+<MudTextField T="string" Value="@idFormaPagamento.ToString()" style="display:none;"
     InputId="id_formaPagamento" />
 
 @code {
-    FormaPagamento SelectedFormaPagamento;
+    [Parameter]
+    public int? idFormaPagamento {get; set;}
+    [Parameter]
+    public string? nomeFormaPagamento {get; set;}
     [Parameter]
     public EventCallback<int> OnFormaPagamentoSelecionado { get; set; }
+    FormaPagamento SelectedFormaPagamento;
 
     private async Task OpenLookupDialog()
     {
@@ -25,6 +29,8 @@
             SelectedFormaPagamento = (FormaPagamento)result.Data;
             if (SelectedFormaPagamento != null)
             {
+                idFormaPagamento = SelectedFormaPagamento?.Id;
+                nomeFormaPagamento = SelectedFormaPagamento?.Nome;
                 await OnFormaPagamentoSelecionado.InvokeAsync(SelectedFormaPagamento.Id);
             }
         }

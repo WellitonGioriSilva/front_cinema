@@ -66,7 +66,7 @@
                                                 <ClienteLookupButton idCliente="@venda.Cliente.Id" nomeCliente="@venda.Cliente.Nome" OnClienteSelecionada="OnClienteSelecionada"/>
                                             </MudCardContent>
                                             <MudCardContent Style="width: 50%">
-                                                <CaixaLookupButton OnCaixaSelecionada="OnCaixaSelecionada"/>
+                                                <CaixaLookupButton idCaixa="@venda.Caixa.Id" dataCaixa="@venda.Caixa.DtIni" OnCaixaSelecionada="OnCaixaSelecionada"/>
                                             </MudCardContent>
                                         </MudItem>
                                         <MudItem xs="12" sm="12" Class="d-flex pt-0">
@@ -100,7 +100,7 @@
                                 {
                                     <MudItem xs="12" sm="12" Class="d-flex">
                                         <MudCardContent Style="width: 50%">
-                                            <FormaPagamentoLookupButton OnFormaPagamentoSelecionado="OnFormaPagamentoSelecionado"/>
+                                            <FormaPagamentoLookupButton idFormaPagamento="@venda.FormaPagamento.Id" nomeFormaPagamento="@venda.FormaPagamento.Nome" OnFormaPagamentoSelecionado="OnFormaPagamentoSelecionado"/>
                                         </MudCardContent>
                                         <MudCardContent Style="width: 50%">
                                             <MudNumericField Immediate="false" Label="Desconto" Format="N2" T="double?"
@@ -173,7 +173,7 @@
     private int quantidadeEntradaInteiras = 0;
     private int totalIngressos = 0;
     private int idCaixaSelecionado = 0;
-    private int idClienteSelecionado = 0;
+    private Cliente clienteSelecionado;
     private int idFilmeSelecionado = 0;
     private int idFormaPagamentoSelecionado = 0;
     private Sessao sessaoSelecionada;
@@ -193,6 +193,9 @@
         total = venda.Total;
         desconto = venda.Desconto;
         data = venda.Data;
+        clienteSelecionado = venda.Cliente;
+        idCaixaSelecionado = venda.Caixa.Id;
+        idFormaPagamentoSelecionado = venda.FormaPagamento.Id;
         StateHasChanged();
     }
 
@@ -222,7 +225,13 @@
             foreach(var ingresso in ingressos){
                 sessao = ingresso.Sessao;
                 sessaoSelecionada = ingresso.Sessao;
-                break;
+
+                if(!ingresso.Meia){
+                    quantidadeEntradaInteiras++;
+                }else{
+                    quantidadeMeiaEntrada++;
+                }
+                totalIngressos++;
             }
 
             await GetAssentosAsync();
@@ -240,48 +249,37 @@
         venda.Caixa ??= new Caixa();
         venda.FormaPagamento ??= new FormaPagamento();
 
-        venda.Cliente.Id = idClienteSelecionado;
+        venda.Cliente.Id = clienteSelecionado.Id;
         venda.Caixa.Id = idCaixaSelecionado;
         venda.FormaPagamento.Id = idFormaPagamentoSelecionado;
         venda.Data = data ?? DateTime.Today;
         venda.Desconto = desconto ?? 0;
         venda.Total = total;
         venda.SubTotal = subTotal;
-
-        List<Assento> assentosSelecionados = new();
-        foreach (Assento assento in assentos)
-        {
-            if (assento != null &&  assento.Id != null && assento.Id != 0 && assento.Selecionado)
-            {
-                assentosSelecionados.Add(new Assento
-                {
-                    Id = assento.Id,
-                    Numero = assento.Numero
-                });
-            }
-        }
-        var assentosAnonimos = assentosSelecionados.Select(a => new { _id = a.Id, _numero = a.Numero }).ToArray();
-
-        
-
         var url = $"venda/ingresso";
-        var body = new
+        var body = new VendaRequest
         {
-            _venda = new
+            Venda = new Venda
             {
-                _subTotal = venda.SubTotal,
-                _data = venda.Data,
-                _desconto = venda.Desconto,
-                _total = venda.Total,
-                _clienteId = venda.Cliente.Id,
-                _caixaId = venda.Caixa.Id,
-                _formaPagamentoId = venda.FormaPagamento.Id
+                Id = venda.Id,
+                SubTotal = venda.SubTotal,
+                Data = venda.Data,
+                Desconto = venda.Desconto,
+                Total = venda.Total,
+                ClienteId = venda.Cliente.Id,
+                CaixaId = venda.Caixa.Id,
+                FormaPagamentoId = venda.FormaPagamento.Id
             },
-            _assentos = assentosAnonimos,
-            _sessaoId = sessaoSelecionada.Id,
-            _quantidadeMeiaEntrada = quantidadeMeiaEntrada
+            Assentos = 
+            assentos.Where(a => a.Selecionado == true).Select(a => new Assento
+            {
+                Id = a.Id,
+                Numero = a.Numero
+            }).ToList(),
+            SessaoId = sessaoSelecionada.Id,
+            QuantidadeMeiaEntrada = quantidadeMeiaEntrada
         };
-        var response = await _http.PostAsJsonAsync($"{url}", body);
+        var response = await _http.PutAsJsonAsync($"{url}", body);
 
         if (!response.IsSuccessStatusCode)
         {
@@ -413,9 +411,9 @@
     }
 
     @* Retorna id do cliente selecionado *@
-    private void OnClienteSelecionada(int id)
+    private void OnClienteSelecionada(Cliente cliente)
     {
-        idClienteSelecionado = id;
+        clienteSelecionado = cliente;
     }
 
     @* Retorna id do cliente selecionado *@

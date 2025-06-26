@@ -27,6 +27,15 @@ namespace front_cinema.Client.Models
 
         [JsonPropertyName("_formaPagamento")]
         public FormaPagamento FormaPagamento { get; set; }
+        
+        [JsonPropertyName("_clienteId")]
+        public int ClienteId { get; set; }
+
+        [JsonPropertyName("_caixaId")]
+        public int CaixaId { get; set; }
+
+        [JsonPropertyName("_formaPagamentoId")]
+        public int FormaPagamentoId { get; set; }
 
 
         public Venda() { }
