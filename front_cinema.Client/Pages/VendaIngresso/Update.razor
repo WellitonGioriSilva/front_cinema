@@ -247,49 +247,54 @@
     // Submit
     private async Task Submit()
     {
-        venda.Cliente ??= new Cliente();
-        venda.Caixa ??= new Caixa();
-        venda.FormaPagamento ??= new FormaPagamento();
-        venda.Cliente.Id = clienteSelecionado.Id;
-        venda.Caixa.Id = idCaixaSelecionado;
-        venda.FormaPagamento.Id = idFormaPagamentoSelecionado;
-        venda.Data = data ?? DateTime.Today;
-        venda.Desconto = desconto ?? 0;
-        venda.Total = total;
-        venda.SubTotal = subTotal;
-        var url = "venda/ingresso";
-        var body = new VendaRequest
-        {
-            Venda = new Venda
+        try{
+        if(assentos.Count == 0) throw new Exception("Selecione os assentos para finalizar a venda!");
+            venda.Cliente ??= new Cliente();
+            venda.Caixa ??= new Caixa();
+            venda.FormaPagamento ??= new FormaPagamento();
+            venda.Cliente.Id = clienteSelecionado.Id;
+            venda.Caixa.Id = idCaixaSelecionado;
+            venda.FormaPagamento.Id = idFormaPagamentoSelecionado;
+            venda.Data = data ?? DateTime.Today;
+            venda.Desconto = desconto ?? 0;
+            venda.Total = total;
+            venda.SubTotal = subTotal;
+            var url = "venda/ingresso";
+            var body = new VendaRequest
             {
-                Id = venda.Id,
-                SubTotal = venda.SubTotal,
-                Data = venda.Data,
-                Desconto = venda.Desconto,
-                Total = venda.Total,
-                ClienteId = venda.Cliente.Id,
-                CaixaId = venda.Caixa.Id,
-                FormaPagamentoId = venda.FormaPagamento.Id
-            },
-            Assentos = assentos.Where(a => a.Selecionado).Select(a => new Assento { Id = a.Id, Numero = a.Numero }).ToList(),
-            SessaoId = sessaoSelecionada.Id,
-            QuantidadeMeiaEntrada = quantidadeMeiaEntrada
-        };
-        var response = await _http.PutAsJsonAsync(url, body);
-        if (!response.IsSuccessStatusCode)
-        {
-            var json = await response.Content.ReadAsStringAsync();
-            var errors = JsonSerializer.Deserialize<ResponseApi>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-            if (errors?.Errors != null)
+                Venda = new Venda
+                {
+                    Id = venda.Id,
+                    SubTotal = venda.SubTotal,
+                    Data = venda.Data,
+                    Desconto = venda.Desconto,
+                    Total = venda.Total,
+                    ClienteId = venda.Cliente.Id,
+                    CaixaId = venda.Caixa.Id,
+                    FormaPagamentoId = venda.FormaPagamento.Id
+                },
+                Assentos = assentos.Where(a => a.Selecionado).Select(a => new Assento { Id = a.Id, Numero = a.Numero }).ToList(),
+                SessaoId = sessaoSelecionada.Id,
+                QuantidadeMeiaEntrada = quantidadeMeiaEntrada
+            };
+            var response = await _http.PutAsJsonAsync(url, body);
+            if (!response.IsSuccessStatusCode)
             {
-                foreach (var errorList in errors.Errors.Values)
-                    foreach (var message in errorList)
-                        Snackbar.Add(message, Severity.Error);
+                var json = await response.Content.ReadAsStringAsync();
+                var errors = JsonSerializer.Deserialize<ResponseApi>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (errors?.Errors != null)
+                {
+                    foreach (var errorList in errors.Errors.Values)
+                        foreach (var message in errorList)
+                            Snackbar.Add(message, Severity.Error);
+                }
+                return;
             }
-            return;
+            Snackbar.Add("Venda realizada com sucesso!", Severity.Success);
+            NavigationManager.NavigateTo("/venda/ingresso");
+        }catch(Exception ex){
+            Snackbar.Add(ex.Message, Severity.Error);
         }
-        Snackbar.Add("Venda realizada com sucesso!", Severity.Success);
-        NavigationManager.NavigateTo("/venda/ingresso");
     }
 
     // Alterna seleção de assentos
