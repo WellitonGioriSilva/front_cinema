@@ -10,9 +10,6 @@ namespace front_cinema.Client.Models
         [JsonPropertyName("_valorIni")]
         public double ValorIni { get; set; }
 
-        [JsonPropertyName("_valorFim")]
-        public double ValorFim { get; set; }
-
         [JsonPropertyName("_totalEnt")]
         public double TotalEnt { get; set; }
 

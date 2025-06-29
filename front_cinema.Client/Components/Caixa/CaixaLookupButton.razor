@@ -8,9 +8,9 @@
 
 @code {
     [Parameter]
-    public int? idCaixa {get; set;}
+    public int? idCaixa { get; set; }
     [Parameter]
-    public DateTime? dataCaixa {get; set;}
+    public DateTime? dataCaixa { get; set; }
 
     [Parameter]
     public EventCallback<int> OnCaixaSelecionada { get; set; }
@@ -18,9 +18,10 @@
 
     private async Task OpenLookupDialog()
     {
+        var parameters = new DialogParameters();
         var options = new DialogOptions() { MaxWidth = MaxWidth.Medium, FullWidth = true };
 
-        var dialog = DialogService.Show<CaixaLookupDialog>("Selecionar Caixa", null, options);
+        var dialog = DialogService.Show<CaixaLookupDialog>("Selecionar Caixa", parameters, options);
         var result = await dialog.Result;
 
         if (!result.Canceled)

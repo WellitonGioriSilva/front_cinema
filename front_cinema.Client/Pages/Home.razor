@@ -1,37 +1,115 @@
 ﻿@page "/"
 
+@using Microsoft.AspNetCore.WebUtilities
+@using front_cinema.Client.Models.Graficos
+@inject HttpClient _http
+
 <PageTitle>Home</PageTitle>
 
 <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
 <MudText Class="mb-8">Welcome to your new app, powered by MudBlazor and the .NET 9 Template!</MudText>
 
-<MudPaper Class="doc-section-component-container d-flex">
-    <MudChart ChartType="ChartType.Bar" ChartSeries="@_series" @bind-SelectedIndex="_index" XAxisLabels="@_xAxisLabels" Width="@_width" Height="@_height" AxisChartOptions="_axisChartOptions"></MudChart>
-    <MudChart ChartType="ChartType.Donut" Width="300px" Height="300px" @bind-SelectedIndex="Index" InputData="@data" InputLabels="@labels"></MudChart>
-    <MudChart ChartType="ChartType.Bar" ChartSeries="@_series" @bind-SelectedIndex="_index" XAxisLabels="@_xAxisLabels" Width="@_width" Height="@_height" AxisChartOptions="_axisChartOptions"></MudChart>
-</MudPaper>
+<MudGrid Gutter="Size.Medium">
+    <MudItem xs="12" sm="12" md="4">
+        <MudPaper Class="doc-section-component-container">
+            <MudChart ChartType="ChartType.Bar" ChartSeries="@barrasFilmesQtd" @bind-SelectedIndex="_index"
+                XAxisLabels="@barrasFilmes" AxisChartOptions="_axisChartOptions" ChartOptions="_chartOptions"
+                Width="100%" Height="300px" />
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" md="4">
+        <MudPaper Class="doc-section-component-container">
+            <MudChart ChartType="ChartType.Donut" InputData="@data" InputLabels="@labels" @bind-SelectedIndex="Index"
+                Width="100%" Height="300px" />
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" md="4">
+        <MudPaper Class="doc-section-component-container">
+            <MudChart ChartType="ChartType.Bar" ChartSeries="@_series" @bind-SelectedIndex="_index"
+                XAxisLabels="@_xAxisLabels" AxisChartOptions="_axisChartOptions" Width="100%" Height="300px" />
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="12" md="12">
+        <MudPaper Class="doc-section-component-container">
+            @if (lineFaturamento?.Count > 0 && lineMeses?.Length > 0)
+            {
+                <MudChart ChartType="ChartType.Line" ChartSeries="@lineFaturamento" @bind-SelectedIndex="_index"
+                    XAxisLabels="@lineMeses" Width="@_width" Height="@_height" ChartOptions="@_options"
+                    AxisChartOptions="_axisChartOptionsLine" />
+
+            }
+        </MudPaper>
+    </MudItem>
+</MudGrid>
 
 @code {
-    private int _index = -1; //default value cannot be 0 -> first selectedindex is 0.
-    private string _width = "650px";
-    private string _height = "350px";
     private AxisChartOptions _axisChartOptions = new AxisChartOptions();
+    private int _index = -1; //default value cannot be 0 -> first selectedindex is 0.
+    private string _width = "100%";
+    private string _height = "350px";
 
-    private List<ChartSeries> _series = new List<ChartSeries>()
+    protected override async Task OnInitializedAsync()
     {
-        new ChartSeries() { Name = "United States", Data = new double[] { 40, 20, 25, 27, 46, 60, 48, 80, 15 } },
-        new ChartSeries() { Name = "Germany", Data = new double[] { 19, 24, 35, 13, 28, 15, 13, 16, 31 } },
-        new ChartSeries() { Name = "Sweden", Data = new double[] { 8, 6, 11, 13, 4, 16, 10, 16, 18 } },
-    };
-    private string[] _xAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
+        // Linha - Faturamento Mensal
+        _options.YAxisFormat = "c2";
+        await GetFaturamentoAsync();
+        await GetFilmesAsync();
+    }
+
+    // Barras
+    private List<ChartSeries> barrasFilmesQtd = new List<ChartSeries>();
+    List<FilmePopular> filmePopulares = new List<FilmePopular>();
+    private string[] barrasFilmes = { "" };
+
+    // Chama filmes populares
+    private async Task GetFilmesAsync()
+    {
+        try
+        {
+            var queryParams = new Dictionary<string, string?>();
+            var url = QueryHelpers.AddQueryString("grafico/filmes", queryParams);
+            var result = await _http.GetFromJsonAsync<List<FilmePopular>>(url);
+            filmePopulares = result ?? new List<FilmePopular>();
+
+            // Criar labels com os nomes dos filmes
+            barrasFilmes = filmePopulares.Select(f => f.NomeGraf).ToArray();
+
+            // Criar a série com os dados das quantidades, um valor para cada filme
+            var quantidades = filmePopulares
+            .Select(f => (double)f.QuantidadeVendidaGraf)
+            .ToArray();
+
+            barrasFilmesQtd = new List<ChartSeries>
+{
+new ChartSeries { Name = "Quantidade Vendida", Data = quantidades }
+};
+
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
 
     // Pizza
+    private List<ChartSeries> _series = new List<ChartSeries>()
+{
+new ChartSeries() { Name = "United States", Data = new double[] { 40, 20, 25, 27, 46, 60, 48, 80, 15 } },
+new ChartSeries() { Name = "Germany", Data = new double[] { 19, 24, 35, 13, 28, 15, 13, 16, 31 } },
+new ChartSeries() { Name = "Sweden", Data = new double[] { 8, 6, 11, 13, 4, 16, 10, 16, 18 } },
+};
+    private string[] _xAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
     private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
     int dataSize = 4;
     public double[] data = { 50, 25, 20, 5 };
     public string[] labels = { "Fossil", "Nuclear", "Solar", "Wind", "Oil", "Coal", "Gas", "Biomass",
-                                "Hydro", "Geothermal", "Nuclear Fusion", "Pumped Storage", "Solar", "Wind", "Oil",
-                                "Coal", "Gas", "Biomass", "Hydro", "Geothermal" };
+"Hydro", "Geothermal", "Nuclear Fusion", "Pumped Storage", "Solar", "Wind", "Oil",
+"Coal", "Gas", "Biomass", "Hydro", "Geothermal" };
 
     Random random = new Random();
 
@@ -59,6 +137,54 @@
         {
             dataSize = dataSize - 1;
             RandomizeData();
+        }
+    }
+
+    // Line chart
+    private ChartOptions _options = new ChartOptions();
+    private AxisChartOptions _axisChartOptionsLine = new AxisChartOptions { MatchBoundsToSize = true };
+    private List<ChartSeries> lineFaturamento = new List<ChartSeries>();
+    private List<FaturamentoMensal> faturamentoMensal = new List<FaturamentoMensal>();
+    private string[] lineMeses = { };
+
+    // Chama faturamento mensal
+    private async Task GetFaturamentoAsync()
+    {
+        try
+        {
+            var queryParams = new Dictionary<string, string?>();
+            var url = QueryHelpers.AddQueryString("grafico/faturamento", queryParams);
+            var result = await _http.GetFromJsonAsync<List<FaturamentoMensal>>(url);
+            faturamentoMensal = result ?? new List<FaturamentoMensal>();
+
+            List<double> entrada = new();
+            List<double> saida = new();
+            List<double> lucro = new();
+            List<string> meses = new();
+            foreach (var mes in faturamentoMensal)
+            {
+                entrada.Add(mes.TotalEntradaMensal);
+                saida.Add(mes.TotalSaidaMensal);
+                lucro.Add(mes.TotalLucroMensal);
+                meses.Add($"{mes.Mes}/{mes.Ano}");
+            }
+            var entradas = new ChartSeries() { Name = "Entradas", Data = entrada.ToArray(), ShowDataMarkers = true };
+            var saidas = new ChartSeries() { Name = "Saidas", Data = saida.ToArray(), ShowDataMarkers = true };
+            var lucros = new ChartSeries() { Name = "Lucro", Data = lucro.ToArray(), ShowDataMarkers = true };
+            lineMeses = meses.ToArray();
+
+            lineFaturamento = new List<ChartSeries>
+{
+entradas,
+saidas,
+lucros
+};
+
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
     }
 }

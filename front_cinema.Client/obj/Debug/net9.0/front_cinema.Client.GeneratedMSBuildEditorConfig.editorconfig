@@ -16,113 +16,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = front_cinema.Client
 build_property.RootNamespace = front_cinema.Client
-build_property.ProjectDir = C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client\
+build_property.ProjectDir = C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Agilsis\Desktop\front_cinema\front_cinema.Client
+build_property.MSBuildProjectDirectory = C:\Users\giori\OneDrive\Área de Trabalho\front_cinema\front_cinema.Client
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Caixa/CaixaLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Caixa/CaixaLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYWl4YVxDYWl4YUxvb2t1cEJ1dHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Caixa/CaixaLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Caixa/CaixaLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYWl4YVxDYWl4YUxvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWFcQ2F0ZWdvcmlhRmlsbWVMb29rdXBCdXR0b24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Categoria/CategoriaFilmeLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWFcQ2F0ZWdvcmlhRmlsbWVMb29rdXBEaWFsb2cucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Cliente/ClienteLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Cliente/ClienteLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDbGllbnRlXENsaWVudGVMb29rdXBCdXR0b24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Cliente/ClienteLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Cliente/ClienteLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDbGllbnRlXENsaWVudGVMb29rdXBEaWFsb2cucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWxtZVxGaWxtZUxvb2t1cEJ1dHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Filme/FilmeLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGaWxtZVxGaWxtZUxvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/FormaPagamento/FormaPagamentoLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/FormaPagamento/FormaPagamentoLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3JtYVBhZ2FtZW50b1xGb3JtYVBhZ2FtZW50b0xvb2t1cEJ1dHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/FormaPagamento/FormaPagamentoLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/FormaPagamento/FormaPagamentoLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb3JtYVBhZ2FtZW50b1xGb3JtYVBhZ2FtZW50b0xvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Funcionario/FuncionarioLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Funcionario/FuncionarioLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGdW5jaW9uYXJpb1xGdW5jaW9uYXJpb0xvb2t1cEJ1dHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Funcionario/FuncionarioLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Funcionario/FuncionarioLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGdW5jaW9uYXJpb1xGdW5jaW9uYXJpb0xvb2t1cERpYWxvZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Geral/DialogoDelecao.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Geral/DialogoDelecao.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHZXJhbFxEaWFsb2dvRGVsZWNhby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupButton.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupButton.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXNzYW9cU2Vzc2FvTG9va3VwQnV0dG9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupDialog.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Components/Sessao/SessaoLookupDialog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZXNzYW9cU2Vzc2FvTG9va3VwRGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Layout/MainLayout.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Layout/NavMenu.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/Counter.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/Home.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/VendaIngresso/Create.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/VendaIngresso/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFJbmdyZXNzb1xDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/VendaIngresso/List.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/VendaIngresso/List.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFJbmdyZXNzb1xMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/VendaIngresso/Update.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/VendaIngresso/Update.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVuZGFJbmdyZXNzb1xVcGRhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Pages/Weather.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/Routes.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Agilsis/Desktop/front_cinema/front_cinema.Client/_Imports.razor]
+[C:/Users/giori/OneDrive/Área de Trabalho/front_cinema/front_cinema.Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
