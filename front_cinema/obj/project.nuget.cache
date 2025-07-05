@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7GJaUuEyaOE=",
+  "dgSpecHash": "LlFuulShUX4=",
   "success": true,
   "projectFilePath": "C:\\Users\\giori\\OneDrive\\Área de Trabalho\\front_cinema\\front_cinema\\front_cinema.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,7 @@
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.jsinterop\\9.0.6\\microsoft.jsinterop.9.0.6.nupkg.sha512",
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.6\\microsoft.jsinterop.webassembly.9.0.6.nupkg.sha512",
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.net.http.headers\\9.0.6\\microsoft.net.http.headers.9.0.6.nupkg.sha512",
-    "C:\\Users\\giori\\.nuget\\packages\\mudblazor\\8.8.0\\mudblazor.8.8.0.nupkg.sha512"
+    "C:\\Users\\giori\\.nuget\\packages\\mudblazor\\8.9.0\\mudblazor.8.9.0.nupkg.sha512"
   ],
   "logs": []
 }

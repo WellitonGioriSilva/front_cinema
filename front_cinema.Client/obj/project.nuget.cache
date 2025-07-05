@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GxYvXNrJ5lc=",
+  "dgSpecHash": "GGJ7NqgYdsQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\giori\\OneDrive\\Área de Trabalho\\front_cinema\\front_cinema.Client\\front_cinema.Client.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.net.http.headers\\9.0.6\\microsoft.net.http.headers.9.0.6.nupkg.sha512",
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.5\\microsoft.net.illink.tasks.9.0.5.nupkg.sha512",
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.5\\microsoft.net.sdk.webassembly.pack.9.0.5.nupkg.sha512",
-    "C:\\Users\\giori\\.nuget\\packages\\mudblazor\\8.8.0\\mudblazor.8.8.0.nupkg.sha512",
+    "C:\\Users\\giori\\.nuget\\packages\\mudblazor\\8.9.0\\mudblazor.8.9.0.nupkg.sha512",
     "C:\\Users\\giori\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.5\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.5.nupkg.sha512"
   ],
   "logs": []

@@ -6,47 +6,63 @@
 
 <PageTitle>Home</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to your new app, powered by MudBlazor and the .NET 9 Template!</MudText>
+<MudText Typo="Typo.h4" GutterBottom="true">Bem Vindo ao System Cine</MudText>
+<MudText Class="mb-8">Sistema de Gerenciamento para Cinemas</MudText>
+@if (barrasFilmesQtd.Count > 0 && lineFaturamento.Count > 0)
+{
+    <MudGrid Gutter="Size.Medium">
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Class="doc-section-component-container">
+                <MudText Class="mt-4" Color="Color.Default">Filmes mais Populares</MudText>
+                <MudChart ChartType="ChartType.Bar" ChartSeries="@barrasFilmesQtd" @bind-SelectedIndex="_index"
+                    XAxisLabels="@barrasFilmes" AxisChartOptions="@_axisChartOptions" ChartOptions="@_options" Width="100%"
+                    Height="300px" />
+            </MudPaper>
+        </MudItem>
 
-<MudGrid Gutter="Size.Medium">
-    <MudItem xs="12" sm="12" md="4">
-        <MudPaper Class="doc-section-component-container">
-            <MudChart ChartType="ChartType.Bar" ChartSeries="@barrasFilmesQtd" @bind-SelectedIndex="_index"
-                XAxisLabels="@barrasFilmes" AxisChartOptions="_axisChartOptions" ChartOptions="_chartOptions"
-                Width="100%" Height="300px" />
-        </MudPaper>
-    </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Class="doc-section-component-container">
+                <MudText Class="mt-4" Color="Color.Default">Produtos mais Vendidos</MudText>
+                <MudChart ChartType="ChartType.Donut" InputData="@quantidadeVendidaProduto" InputLabels="@nomesFilmes"
+                    @bind-SelectedIndex="Index" Width="100%" Height="300px" />
+            </MudPaper>
+        </MudItem>
 
-    <MudItem xs="12" sm="12" md="4">
-        <MudPaper Class="doc-section-component-container">
-            <MudChart ChartType="ChartType.Donut" InputData="@data" InputLabels="@labels" @bind-SelectedIndex="Index"
-                Width="100%" Height="300px" />
-        </MudPaper>
-    </MudItem>
+        <MudItem xs="12" sm="12" md="4">
+            <MudPaper Class="doc-section-component-container">
+                <MudText Class="mt-4" Color="Color.Default">Funcinoário com maior Faturamento</MudText>
+                <MudChart ChartType="ChartType.Bar" ChartSeries="@_series" @bind-SelectedIndex="_index"
+                    XAxisLabels="@_xAxisLabels" AxisChartOptions="_axisChartOptions" Width="100%" Height="300px" />
+            </MudPaper>
+        </MudItem>
 
-    <MudItem xs="12" sm="12" md="4">
-        <MudPaper Class="doc-section-component-container">
-            <MudChart ChartType="ChartType.Bar" ChartSeries="@_series" @bind-SelectedIndex="_index"
-                XAxisLabels="@_xAxisLabels" AxisChartOptions="_axisChartOptions" Width="100%" Height="300px" />
-        </MudPaper>
-    </MudItem>
-
-    <MudItem xs="12" sm="12" md="12">
-        <MudPaper Class="doc-section-component-container">
-            @if (lineFaturamento?.Count > 0 && lineMeses?.Length > 0)
-            {
+        <MudItem xs="12" sm="12" md="12">
+            <MudPaper Class="doc-section-component-container">
+                <MudText Class="mt-4" Color="Color.Default">Faturamento Mensal</MudText>
                 <MudChart ChartType="ChartType.Line" ChartSeries="@lineFaturamento" @bind-SelectedIndex="_index"
-                    XAxisLabels="@lineMeses" Width="@_width" Height="@_height" ChartOptions="@_options"
+                    XAxisLabels="@lineMeses" Width="@_width" Height="@_height" ChartOptions="@_optionsReal"
                     AxisChartOptions="_axisChartOptionsLine" />
-
-            }
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+}
+else
+{
+    <MudOverlay Visible="true" DarkBackground="true" ZIndex="5000">
+        <MudPaper Class="d-flex flex-column justify-center align-center"
+            Style="height: 100vh; background-color: transparent; box-shadow: none;">
+            <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Medium" />
         </MudPaper>
-    </MudItem>
-</MudGrid>
+    </MudOverlay>
+}
 
 @code {
+    // Configurações do gráfico
     private AxisChartOptions _axisChartOptions = new AxisChartOptions();
+    // Options com o valor em real monetário
+    private ChartOptions _optionsReal = new ChartOptions();
+    private ChartOptions _options = new ChartOptions();
+    private AxisChartOptions _axisChartOptionsLine = new AxisChartOptions { MatchBoundsToSize = true };
     private int _index = -1; //default value cannot be 0 -> first selectedindex is 0.
     private string _width = "100%";
     private string _height = "350px";
@@ -54,9 +70,10 @@
     protected override async Task OnInitializedAsync()
     {
         // Linha - Faturamento Mensal
-        _options.YAxisFormat = "c2";
+        _optionsReal.YAxisFormat = "c2";
         await GetFaturamentoAsync();
         await GetFilmesAsync();
+        await GetProdutosAsync();
     }
 
     // Barras
@@ -97,6 +114,7 @@ new ChartSeries { Name = "Quantidade Vendida", Data = quantidades }
 
 
     // Pizza
+    private List<ProdutoMaisVendido> produtoMaisVendidos = new List<ProdutoMaisVendido>();
     private List<ChartSeries> _series = new List<ChartSeries>()
 {
 new ChartSeries() { Name = "United States", Data = new double[] { 40, 20, 25, 27, 46, 60, 48, 80, 15 } },
@@ -106,43 +124,35 @@ new ChartSeries() { Name = "Sweden", Data = new double[] { 8, 6, 11, 13, 4, 16, 
     private string[] _xAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
     private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
     int dataSize = 4;
-    public double[] data = { 50, 25, 20, 5 };
-    public string[] labels = { "Fossil", "Nuclear", "Solar", "Wind", "Oil", "Coal", "Gas", "Biomass",
-"Hydro", "Geothermal", "Nuclear Fusion", "Pumped Storage", "Solar", "Wind", "Oil",
-"Coal", "Gas", "Biomass", "Hydro", "Geothermal" };
+    public double[] quantidadeVendidaProduto = { };
+    public string[] nomesFilmes = { };
 
-    Random random = new Random();
-
-    void RandomizeData()
+    private async Task GetProdutosAsync()
     {
-        var new_data = new double[dataSize];
-        for (int i = 0; i < new_data.Length; i++)
-            new_data[i] = random.NextDouble() * 100;
-        data = new_data;
-        StateHasChanged();
-    }
-
-    void AddDataSize()
-    {
-        if (dataSize < 20)
+        try
         {
-            dataSize = dataSize + 1;
-            RandomizeData();
+            var queryParams = new Dictionary<string, string?>();
+            var url = QueryHelpers.AddQueryString("grafico/produtos", queryParams);
+            var result = await _http.GetFromJsonAsync<List<ProdutoMaisVendido>>(url);
+            produtoMaisVendidos = result ?? new List<ProdutoMaisVendido>();
+
+            // Criar labels com os nomes dos filmes
+            nomesFilmes = produtoMaisVendidos.Select(p => p.NomeGraf).ToArray();
+
+            // Criar a série com os dados das quantidades, um valor para cada filme
+            quantidadeVendidaProduto = produtoMaisVendidos
+            .Select(p => (double)p.QuantidadeVendidaGraf)
+            .ToArray();
+
+            StateHasChanged();
         }
-    }
-
-    void RemoveDataSize()
-    {
-        if (dataSize > 0)
+        catch (Exception ex)
         {
-            dataSize = dataSize - 1;
-            RandomizeData();
+            Console.WriteLine(ex.Message);
         }
     }
 
     // Line chart
-    private ChartOptions _options = new ChartOptions();
-    private AxisChartOptions _axisChartOptionsLine = new AxisChartOptions { MatchBoundsToSize = true };
     private List<ChartSeries> lineFaturamento = new List<ChartSeries>();
     private List<FaturamentoMensal> faturamentoMensal = new List<FaturamentoMensal>();
     private string[] lineMeses = { };

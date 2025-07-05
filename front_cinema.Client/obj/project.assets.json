@@ -491,7 +491,7 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
-      "MudBlazor/8.8.0": {
+      "MudBlazor/8.9.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components": "9.0.1",
@@ -1007,7 +1007,7 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
       },
-      "MudBlazor/8.8.0": {
+      "MudBlazor/8.9.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components": "9.0.1",
@@ -1813,10 +1813,10 @@
         "tools/net9.0/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
     },
-    "MudBlazor/8.8.0": {
-      "sha512": "9LTen4AUh+GjXqKcrBoUxCZEEgnKx3a+82k2F7K849rfpGs/fQ1pha0sw2upMzGFIsCRfI+w8bkgZZspJCxbpQ==",
+    "MudBlazor/8.9.0": {
+      "sha512": "KdjXMXiSvl6uNr+S2YDhGI1aX/TULMQejQSniMlp6QTss35NKFrJyrMAmN082HNvOObuKdnTtLpntJ7rM5Op/A==",
       "type": "package",
-      "path": "mudblazor/8.8.0",
+      "path": "mudblazor/8.9.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1834,7 +1834,7 @@
         "lib/net8.0/MudBlazor.xml",
         "lib/net9.0/MudBlazor.dll",
         "lib/net9.0/MudBlazor.xml",
-        "mudblazor.8.8.0.nupkg.sha512",
+        "mudblazor.8.9.0.nupkg.sha512",
         "mudblazor.nuspec",
         "staticwebassets/MudBlazor.min.css",
         "staticwebassets/MudBlazor.min.js"
@@ -1847,7 +1847,7 @@
       "Microsoft.AspNetCore.WebUtilities >= 9.0.6",
       "Microsoft.NET.ILLink.Tasks >= 9.0.5",
       "Microsoft.NET.Sdk.WebAssembly.Pack >= 9.0.5",
-      "MudBlazor >= 8.*"
+      "MudBlazor >= 8.9.0"
     ]
   },
   "packageFolders": {
@@ -1923,7 +1923,7 @@
           },
           "MudBlazor": {
             "target": "Package",
-            "version": "[8.*, )"
+            "version": "[8.9.0, )"
           }
         },
         "imports": [
